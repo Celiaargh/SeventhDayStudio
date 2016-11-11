@@ -1,0 +1,768 @@
+ul, li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
+
+body {
+  font-family: 'Open Sans', sans-serif; }
+
+header:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 90%;
+  height: 90%;
+  transform: translate(-50%, -50%);
+  background-image: linear-gradient(0deg, white, white), linear-gradient(0deg, white, white);
+  background-size: 0.5em 25em, 13em 0.5em, 20em 0.5em;
+  background-position: left top, left top;
+  background-repeat: no-repeat;
+  z-index: 0; }
+
+header {
+  background-image: url(../assets/images/homebackground.jpg);
+  background-size: cover;
+  background-position: 65% 20%;
+  position: relative; }
+  header h1 {
+    font-family: 'Open Sans Condensed', sans-serif;
+    text-transform: uppercase;
+    color: white;
+    font-weight: bold;
+    font-size: 3em;
+    width: 4em;
+    height: 5em;
+    letter-spacing: 0.1em;
+    margin-top: 5.5em;
+    margin-left: 2.5em;
+    line-height: 1.2em;
+    text-align: right; }
+
+header:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 90%;
+  height: 90%;
+  transform: translate(-50%, -50%);
+  background-image: linear-gradient(0deg, white, white), linear-gradient(0deg, white, white);
+  background-size: 0.5em 20em, 12em 0.5em;
+  background-position: right bottom, right bottom;
+  background-repeat: no-repeat; }
+
+nav {
+  border: 0.2em solid transparent;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  position: relative; }
+  nav .nav-hide {
+    width: 100%;
+    position: fixed;
+    background-color: #fff;
+    top: -20em;
+    z-index: 100; }
+  nav .nav-hide li {
+    text-align: center;
+    padding: 0.5em;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    width: 100%; }
+  nav .nav-hide li a {
+    font-size: 1.5em;
+    color: #000;
+    font-family: 'Open Sans Condensed', sans-serif;
+    text-decoration: none;
+    display: block; }
+  nav button {
+    font-size: 2em;
+    color: #fff;
+    height: 1.2em;
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0; }
+
+.welcome {
+  width: 100%;
+  margin-top: 5em;
+  height: 32em;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+.welcome-container {
+  margin-left: 1em; }
+
+.welcometitle {
+  border-bottom: #ff9999 1px solid;
+  width: 20em;
+  margin-left: 2em;
+  margin-bottom: 1em;
+  margin-top: 3em; }
+
+.welcome p {
+  text-align: left;
+  margin: 0;
+  font-family: 'Open Sans Condensed', sans-serif;
+  text-transform: uppercase;
+  color: #ff9999;
+  font-size: 2em; }
+
+.welcome h1 {
+  text-align: left;
+  margin: 0;
+  color: #999999;
+  font-family: 'Open Sans Condensed', sans-serif;
+  text-transform: uppercase;
+  font-size: 2.5em; }
+
+.welcomeabout {
+  height: 100%; }
+  .welcomeabout p {
+    text-align: left;
+    color: #595959;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.9em;
+    text-transform: lowercase;
+    margin-left: 2em;
+    padding-bottom: 1em;
+    font-weight: 300;
+    width: 25em; }
+  .welcomeabout .welcomephoto {
+    display: none; }
+
+.welcomeabout:after {
+  display: block;
+  content: '';
+  width: 20em;
+  margin-left: 2em;
+  border-bottom: #ff9999 1px solid; }
+
+.welcomephotos {
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 1em;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+section.artists {
+  width: 100%;
+  margin-top: 5em;
+  background-color: #f5f5f5; }
+  section.artists .artinfo h1 {
+    text-align: center;
+    margin-top: 2em;
+    font-size: 2em;
+    font-family: 'Open Sans Condensed', sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    padding-top: 1em; }
+  section.artists .artinfo p {
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.9em;
+    width: 25em;
+    text-transform: lowercase;
+    padding-bottom: 1em;
+    font-weight: 300;
+    margin: 0 auto;
+    color: #595959; }
+  section.artists .portraitframe {
+    margin-left: 2em; }
+    section.artists .portraitframe .aname {
+      text-decoration: none;
+      height: 2.5em;
+      padding-left: 1em; }
+      section.artists .portraitframe .aname h1 {
+        font-size: 1.3em;
+        text-align: left;
+        text-transform: uppercase;
+        font-family: 'Open Sans', sans-serif;
+        color: #ff9999;
+        margin: 0; }
+      section.artists .portraitframe .aname i {
+        color: #999;
+        cursor: pointer; }
+    section.artists .portraitframe .triblock {
+      text-decoration: none;
+      height: 2.5em;
+      padding-left: 1em; }
+      section.artists .portraitframe .triblock h1 {
+        font-size: 1.3em;
+        text-align: left;
+        text-transform: uppercase;
+        font-family: 'Open Sans', sans-serif;
+        color: #ff9999;
+        margin: 0; }
+      section.artists .portraitframe .triblock i {
+        color: #999; }
+    section.artists .portraitframe .drop-down .drop-down-content {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -ms-flex-pack: distribute;
+      justify-content: space-around;
+      margin-bottom: 1em; }
+      section.artists .portraitframe .drop-down .drop-down-content .tattoo-img {
+        margin-top: 0.5em;
+        margin-left: 1em;
+        margin-bottom: 0.5em;
+        height: 8em;
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%; }
+      section.artists .portraitframe .drop-down .drop-down-content .jasper {
+        background-image: url(../assets/images/jaspermobile.jpg);
+        background-repeat: no-repeat; }
+      section.artists .portraitframe .drop-down .drop-down-content .hannah {
+        background-image: url(../assets/images/hannahmobile.jpg);
+        background-repeat: no-repeat; }
+      section.artists .portraitframe .drop-down .drop-down-content .minnie {
+        background-image: url(../assets/images/minniemobile.jpg);
+        background-repeat: no-repeat; }
+      section.artists .portraitframe .drop-down .drop-down-content .phoebe {
+        background-image: url(../assets/images/phoebemobile.jpg);
+        background-repeat: no-repeat; }
+      section.artists .portraitframe .drop-down .drop-down-content .stripe {
+        margin-top: 0.6em;
+        height: 0.1em;
+        width: 19em;
+        background-color: #ffcccc;
+        -ms-flex: 0 0 85%;
+        flex: 0 0 85%; }
+      section.artists .portraitframe .drop-down .drop-down-content a {
+        text-decoration: none;
+        color: #ccc; }
+      section.artists .portraitframe .drop-down .drop-down-content a:hover {
+        color: #ffcccc; }
+      section.artists .portraitframe .drop-down .drop-down-content i {
+        -ms-flex: 0 0 5%;
+        flex: 0 0 5%; }
+      section.artists .portraitframe .drop-down .drop-down-content p {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 0.8em;
+        text-align: left;
+        -ms-flex: 0 0 90%;
+        flex: 0 0 90%; }
+    section.artists .portraitframe .tri-drop {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -ms-flex-pack: distribute;
+      justify-content: space-around;
+      margin-bottom: 1em; }
+      section.artists .portraitframe .tri-drop .tattoo-img {
+        margin-top: 0.5em;
+        margin-left: 1em;
+        margin-bottom: 0.5em;
+        height: 8em;
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%; }
+      section.artists .portraitframe .tri-drop .tri {
+        background-image: url(../assets/images/trimobile.jpg);
+        background-repeat: no-repeat; }
+      section.artists .portraitframe .tri-drop .stripe {
+        margin-top: 0.6em;
+        height: 0.1em;
+        width: 19em;
+        background-color: #ffcccc;
+        -ms-flex: 0 0 85%;
+        flex: 0 0 85%; }
+      section.artists .portraitframe .tri-drop a {
+        text-decoration: none;
+        color: #ccc; }
+      section.artists .portraitframe .tri-drop a:hover {
+        color: #ffcccc; }
+      section.artists .portraitframe .tri-drop i {
+        -ms-flex: 0 0 5%;
+        flex: 0 0 5%; }
+      section.artists .portraitframe .tri-drop p {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 0.8em;
+        text-align: left;
+        -ms-flex: 0 0 90%;
+        flex: 0 0 90%; }
+
+section.gallery-frame {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  color: #000;
+  margin: 0;
+  padding: 0;
+  margin-top: 5em; }
+  section.gallery-frame .gallery-info h1 {
+    text-align: center;
+    margin-top: 2em;
+    font-size: 2em;
+    font-family: 'Open Sans Condensed', sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 0; }
+  section.gallery-frame .gallery-info p {
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.9em;
+    text-transform: lowercase;
+    padding-bottom: 1em;
+    font-weight: 300;
+    width: 25em;
+    margin: 0 auto;
+    color: #595959; }
+  section.gallery-frame .swiper-container {
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto; }
+    section.gallery-frame .swiper-container .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      /* Center slide text vertically */
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -ms-flex-align: center;
+      align-items: center; }
+      section.gallery-frame .swiper-container .swiper-slide img {
+        height: 15em; }
+
+section.FAQ {
+  width: 100%;
+  margin-top: 5em;
+  padding-left: 1em;
+  padding-right: 1em; }
+  section.FAQ h1 {
+    text-align: center;
+    font-family: 'Open Sans Condensed', sans-serif;
+    text-transform: uppercase;
+    font-size: 2em; }
+  section.FAQ .answered {
+    border: #ccc solid 0.2em; }
+    section.FAQ .answered .faq-cont {
+      text-align: center;
+      margin-bottom: 1em;
+      pointer: cursor; }
+    section.FAQ .answered .Question {
+      padding: 0.8em; }
+      section.FAQ .answered .Question h3 {
+        font-size: 1em;
+        color: #ff9999;
+        margin: 0;
+        font-weight: 300;
+        text-align: center; }
+      section.FAQ .answered .Question p {
+        margin: 0;
+        font-size: 0.8em;
+        margin-bottom: 1.3em;
+        text-align: center; }
+      section.FAQ .answered .Question a {
+        text-decoration: none;
+        color: #999; }
+      section.FAQ .answered .Question a:hover {
+        color: #ff9999; }
+
+section.contact {
+  margin-top: 5em;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  background-color: #f5f5f5; }
+  section.contact h1 {
+    text-align: center;
+    font-family: 'Open Sans Condensed', sans-serif;
+    text-transform: uppercase;
+    font-size: 2em;
+    margin-bottom: 0; }
+  section.contact p {
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.9em;
+    padding-bottom: 1em;
+    font-weight: 300;
+    margin: 0;
+    color: #595959; }
+  section.contact .contact-info {
+    display: -ms-flexbox;
+    display: flex; }
+    section.contact .contact-info .address {
+      width: 10em;
+      margin-left: 1em; }
+      section.contact .contact-info .address p {
+        text-align: left; }
+        section.contact .contact-info .address p i {
+          color: #ff9999; }
+    section.contact .contact-info .opening-times {
+      width: 10em; }
+      section.contact .contact-info .opening-times p {
+        text-align: left; }
+        section.contact .contact-info .opening-times p i {
+          color: #ff9999; }
+    section.contact .contact-info .phone {
+      width: 8em;
+      margin-left: 1em; }
+      section.contact .contact-info .phone p {
+        text-align: left; }
+        section.contact .contact-info .phone p i {
+          color: #ff9999; }
+  section.contact form .form-group label {
+    display: block;
+    color: #ff9999;
+    margin-left: 1em;
+    font-weight: 300; }
+  section.contact form .form-group input {
+    width: 25em;
+    margin-left: 1em; }
+  section.contact form .form-group textarea {
+    width: 25em;
+    height: 10em;
+    margin-left: 1em; }
+  section.contact form .form-group select {
+    width: 25em;
+    margin-left: 1em; }
+  section.contact form .form-group #submit {
+    text-transform: uppercase;
+    color: #ffcccc; }
+
+section.Map iframe {
+  width: 100%; }
+
+footer {
+  background-color: #f5f5f5;
+  height: 3em;
+  padding-top: 1em; }
+  footer p {
+    color: #ff9999;
+    font-family: "Open Sans Condensed", sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: center; }
+
+@media only screen and (min-width: 40em) {
+  section.welcome .welcometitle {
+    text-align: center;
+    margin-left: 6em;
+    width: 25em;
+    height: 7em; }
+    section.welcome .welcometitle p {
+      font-size: 2em; }
+    section.welcome .welcometitle h1 {
+      font-size: 2.5em;
+      margin-bottom: 2em; }
+  section.welcome .welcomeabout {
+    margin-left: 4em; }
+    section.welcome .welcomeabout p {
+      font-size: 1em;
+      width: 30em; }
+  section.welcome .welcomeabout:after {
+    display: block;
+    content: '';
+    margin-top: 1em;
+    width: 28em; }
+  section.artists .artinfo h1 {
+    font-size: 2.5em; }
+  section.artists .artinfo p {
+    width: 30em;
+    font-size: 1em;
+    margin-bottom: 2em; }
+  section.artists .portraitframe .triblock {
+    margin-left: 1em; }
+  section.artists .portraitframe .tri-drop {
+    width: 32em;
+    margin-left: 3em; }
+    section.artists .portraitframe .tri-drop .tri {
+      background-image: url(../assets/images/triportrait.jpg);
+      height: 13em; }
+  section.artists .portraitframe .aname {
+    margin-left: 1em; }
+  section.artists .portraitframe .drop-down {
+    width: 32em;
+    margin-left: 3em; }
+    section.artists .portraitframe .drop-down .drop-down-content .tattoo-img {
+      height: 12em; }
+    section.artists .portraitframe .drop-down .drop-down-content .jasper {
+      background-image: url(../assets/images/jasportrait.jpg); }
+    section.artists .portraitframe .drop-down .drop-down-content .hannah {
+      background-image: url(../assets/images/hannahportrait.jpg); }
+    section.artists .portraitframe .drop-down .drop-down-content .minnie {
+      background-image: url(../assets/images/minnieportrait.jpg); }
+    section.artists .portraitframe .drop-down .drop-down-content .phoebe {
+      background-image: url(../assets/images/phoebeportrait.jpg); }
+  section.gallery-frame .gallery-info h1 {
+    font-size: 2.5em; }
+  section.gallery-frame .gallery-info p {
+    width: 30em;
+    font-size: 1em;
+    margin-bottom: 2em; }
+  section.contact h1 {
+    font-size: 2.5em; }
+  section.contact p {
+    width: 30em;
+    font-size: 1em;
+    margin: 0 auto;
+    margin-bottom: 2em; }
+  section.contact .contact-info {
+    width: 30em;
+    margin: 0 auto; }
+  section.contact form {
+    width: 45em;
+    margin: 0 auto;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
+    section.contact form .form-group input {
+      width: 21em; }
+    section.contact form .form-group select {
+      width: 21.2em; }
+    section.contact form .form-group textarea {
+      width: 43em; }
+    section.contact form .form-group input#submit {
+      width: 43em; }
+  section.Map iframe {
+    width: 100%; } }
+
+@media only screen and (min-width: 60em) {
+  nav .fold {
+    display: none; }
+  nav .nav-hide {
+    top: 0em !important; }
+  nav .no-hide {
+    position: relative;
+    background-color: transparent;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    margin-right: 3em;
+    margin-top: 1em; }
+    nav .no-hide li {
+      display: inline-block;
+      width: 8%;
+      -ms-flex: 0 0 5em;
+      flex: 0 0 5em;
+      border-bottom: transparent; }
+      nav .no-hide li a {
+        font-size: 1.2em;
+        height: 100%;
+        width: 100%;
+        color: white;
+        text-transform: uppercase; }
+  section.welcome {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    height: auto; }
+    section.welcome .welcome-container {
+      -ms-flex: 1 0 50%;
+      flex: 1 0 50%; }
+      section.welcome .welcome-container .welcometitle {
+        margin: 0;
+        margin-left: 2em;
+        margin-bottom: 1em;
+        width: 25em; }
+        section.welcome .welcome-container .welcometitle p {
+          text-align: left; }
+        section.welcome .welcome-container .welcometitle h1 {
+          text-align: left;
+          margin: 0; }
+      section.welcome .welcome-container .welcomeabout {
+        margin: 0; }
+        section.welcome .welcome-container .welcomeabout p {
+          width: 30em;
+          text-align: left; }
+      section.welcome .welcome-container .welcomeabout:after {
+        display: block;
+        content: '';
+        margin-top: 1em;
+        width: 23em; }
+    section.welcome .welcome-photo {
+      margin-top: 0.5em;
+      margin-left: 8em;
+      height: 35em;
+      -ms-flex: 0 0 20%;
+      flex: 0 0 20%; }
+      section.welcome .welcome-photo .wphoto {
+        width: 20em;
+        height: 10em;
+        margin-top: 1em; }
+      section.welcome .welcome-photo :nth-child(1) {
+        background-image: url(../assets/images/wpic01.jpg);
+        background-repeat: no-repeat; }
+      section.welcome .welcome-photo :nth-child(2) {
+        background-image: url(../assets/images/wpic02.jpg);
+        background-repeat: no-repeat; }
+      section.welcome .welcome-photo :nth-child(3) {
+        background-image: url(../assets/images/wpic03.jpg);
+        background-repeat: no-repeat; }
+  section.artists .portraitframe .triblock {
+    margin-left: 11em; }
+  section.artists .portraitframe .tri-drop {
+    margin: 0 auto;
+    width: 55em;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-line-pack: center;
+    align-content: center; }
+    section.artists .portraitframe .tri-drop .tattoo-img {
+      -ms-flex: 0 0 50em;
+      flex: 0 0 50em;
+      height: 15em;
+      margin-left: 2em; }
+    section.artists .portraitframe .tri-drop .stripe {
+      -ms-flex: 0 0 85%;
+      flex: 0 0 85%;
+      height: 0.2em;
+      margin-left: 3em; }
+    section.artists .portraitframe .tri-drop .social-media {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -ms-flex: 0 0 4em;
+      flex: 0 0 4em;
+      margin-bottom: 2em;
+      margin-left: 0.5em; }
+      section.artists .portraitframe .tri-drop .social-media .fa-instagram {
+        -ms-flex: 1 0 100%;
+        flex: 1 0 100%;
+        margin-right: 0.5em; }
+      section.artists .portraitframe .tri-drop .social-media .fa-faceook-square {
+        -ms-flex: 1 0 100%;
+        flex: 1 0 100%; }
+      section.artists .portraitframe .tri-drop .social-media a {
+        height: 1em; }
+    section.artists .portraitframe .tri-drop p {
+      -ms-flex: 0 0 50em;
+      flex: 0 0 50em;
+      margin-left: 1em;
+      font-size: 0.9em;
+      text-align: left; }
+  section.artists .portraitframe .staff-about {
+    margin-top: 3em;
+    padding-bottom: 3em;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
+    section.artists .portraitframe .staff-about .aname {
+      margin-left: 11em;
+      -ms-flex: 0 0 20em;
+      flex: 0 0 20em; }
+    section.artists .portraitframe .staff-about .drop-down {
+      display: -ms-flexbox;
+      display: flex;
+      margin-left: 12em;
+      width: 52em;
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -ms-flex-line-pack: center;
+      align-content: center; }
+      section.artists .portraitframe .staff-about .drop-down .tattoo-img {
+        -ms-flex: 0 0 50em;
+        flex: 0 0 50em;
+        height: 15em;
+        margin-left: 2em; }
+      section.artists .portraitframe .staff-about .drop-down .stripe {
+        -ms-flex: 0 0 85%;
+        flex: 0 0 85%;
+        height: 0.2em;
+        margin-left: 3em; }
+      section.artists .portraitframe .staff-about .drop-down .social-media {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -ms-flex: 0 0 4em;
+        flex: 0 0 4em;
+        margin-bottom: 2em;
+        margin-left: 0.5em; }
+        section.artists .portraitframe .staff-about .drop-down .social-media .fa-instagram {
+          -ms-flex: 1 0 100%;
+          flex: 1 0 100%;
+          margin-right: 0.5em; }
+        section.artists .portraitframe .staff-about .drop-down .social-media .fa-faceook-square {
+          -ms-flex: 1 0 100%;
+          flex: 1 0 100%; }
+        section.artists .portraitframe .staff-about .drop-down .social-media a {
+          height: 1em; }
+      section.artists .portraitframe .staff-about .drop-down p {
+        -ms-flex: 0 0 50em;
+        flex: 0 0 50em;
+        margin-left: 1em;
+        font-size: 0.9em;
+        text-align: left; }
+  section.gallery-frame .swiper-container {
+    margin: 0 auto; }
+  section.FAQ .answered {
+    width: 50em;
+    margin: 0 auto; }
+    section.FAQ .answered .faq-cont {
+      display: none; }
+    section.FAQ .answered .faq-drop-down {
+      display: block !important;
+      padding-bottom: 2em; }
+    section.FAQ .answered .Question h3 {
+      font-size: 1.2em; }
+    section.FAQ .answered .Question p {
+      margin: 0 auto;
+      font-size: 0.9em;
+      width: 43em; }
+  section.Map .location {
+    width: 100%; } }
+
+@media only screen and (min-width: 80em) {
+  header nav .no-hide {
+    margin-right: 5%; }
+  header h1 {
+    margin-left: 8%; }
+  section.welcome {
+    padding-left: 20%; }
+  section.artists .artinfo h1 {
+    font-size: 3.5em; }
+  section.artists .portraitframe .triblock {
+    padding-left: 20%; }
+    section.artists .portraitframe .triblock h1 {
+      font-size: 1.5em; }
+  section.artists .portraitframe .tri-drop .tri {
+    background-image: url(../assets/images/trifull.jpg); }
+  section.artists .portraitframe .staff-about {
+    margin-left: 24%;
+    padding-left: 5%;
+    width: 50%; }
+    section.artists .portraitframe .staff-about .staff-container {
+      -ms-flex: 0 0 50%;
+      flex: 0 0 50%; }
+      section.artists .portraitframe .staff-about .staff-container .aname {
+        margin-left: 0; }
+        section.artists .portraitframe .staff-about .staff-container .aname h1 {
+          font-size: 1.5em; }
+      section.artists .portraitframe .staff-about .staff-container .drop-down {
+        margin-left: 0; }
+        section.artists .portraitframe .staff-about .staff-container .drop-down .jasper {
+          background-image: url(../assets/images/jasfull.jpg); }
+        section.artists .portraitframe .staff-about .staff-container .drop-down .hannah {
+          background-image: url(../assets/images/hannahfull.jpg); }
+        section.artists .portraitframe .staff-about .staff-container .drop-down .minnie {
+          background-image: url(../assets/images/minniefull.jpg); }
+        section.artists .portraitframe .staff-about .staff-container .drop-down .phoebe {
+          background-image: url(../assets/images/phoebefull.jpg); }
+  section.gallery-frame .swiper-container .swiper-wrapper .swiper-slide img {
+    height: 25em; }
+  section.Map iframe {
+    width: 100%; } }
