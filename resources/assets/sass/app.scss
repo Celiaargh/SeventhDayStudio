@@ -1,2 +1,1299 @@
 // @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
+
+$FaintBlack:rgba(0,0,0,0.1);
+$LightPink:#ff9999;
+
+
+ul,li{
+	list-style-type: none;
+	margin:0;
+	padding:0;
+}
+
+body{
+	font-family: 'Open Sans', sans-serif;
+}
+
+header:before{
+	content:'';
+	display:block;
+	position:absolute;
+	top:50%;
+	left:50%;
+	width:90%;
+	height:90%;
+	transform:translate(-50%,-50%);
+	background-image: linear-gradient(0deg, white, white),linear-gradient(0deg, white, white); 
+	background-size: 0.5em 25em, 13em 0.5em, 20em 0.5em ;
+	background-position:left top, left top;
+	background-repeat:no-repeat;
+	z-index:0;
+}
+
+
+header{
+	background-image:url(../assets/images/homebackground.jpg), ;
+	background-size:cover;
+	background-position: 65% 20%;
+	position:relative;
+
+
+	h1{
+
+		font-family: 'Open Sans Condensed', sans-serif;
+		text-transform: uppercase;
+		color: white;
+		font-weight: bold;
+		font-size:3em;
+		width: 4em;
+		height: 5em;
+		letter-spacing: 0.1em;
+		margin-top: 5.5em;
+		margin-left: 2.5em;
+		line-height: 1.2em;
+		text-align:right;
+
+	
+
+
+	}
+}
+
+header:after{
+	content:'';
+	display:block;
+	position:absolute;
+	top:50%;
+	left:50%;
+	width:90%;
+	height:90%;
+	transform:translate(-50%,-50%);
+	background-image: linear-gradient(0deg, white, white),linear-gradient(0deg, white, white); 
+	background-size: 0.5em 20em, 12em 0.5em;
+	background-position:right bottom, right bottom;
+	background-repeat:no-repeat;
+}
+
+
+nav{ 
+
+	
+	border: 0.2em solid transparent;
+	display: flex;
+	justify-content:flex-end;
+	position:relative;
+
+	
+	.nav-hide{
+		width: 100%;
+		position:fixed;
+		background-color:#fff;
+		top:-20em;
+		z-index: 100;
+		
+	}	
+
+	.nav-hide li{
+		text-align:center;
+		padding:0.5em;
+		border-bottom:1px solid $FaintBlack ;
+		width: 100%;
+	}
+
+	.nav-hide li a{
+
+		font-size: 1.5em;
+		color:#000;
+		font-family: 'Open Sans Condensed', sans-serif;
+		text-decoration: none;
+		display: block;
+	}
+
+	button{
+		font-size: 2em;
+		color: #fff;
+		height: 1.2em;
+		background-color: Transparent;
+        background-repeat:no-repeat;
+        border: none;
+        cursor:pointer;
+        overflow: hidden;
+        position:absolute;
+       	// border:1px red solid;
+        z-index:1;
+        top:0;
+        right:0;
+	}
+}
+
+.welcome{
+  width:100%;
+  margin-top: 5em;
+  height: 32em;
+  justify-content: center;
+}
+
+.welcome-container{
+	margin-left:1em;
+}
+
+.welcometitle{
+  border-bottom: $LightPink 1px solid;
+ 
+  width: 20em;
+  margin-left: 2em;
+  margin-bottom: 1em;
+  margin-top:3em;
+
+}
+
+.welcome p{
+  text-align:left;
+  margin:0;
+  font-family:'Open Sans Condensed', sans-serif;
+  text-transform: uppercase;
+  color:$LightPink;
+  font-size: 2em;
+
+
+}
+
+.welcome h1{
+  text-align:left;
+  margin:0;
+  color:  #999999;
+  font-family:'Open Sans Condensed', sans-serif;
+  text-transform: uppercase;
+  font-size: 2.5em;
+  
+}
+
+.welcomeabout{
+
+	height:100%;
+
+	p{
+		text-align: left;
+		color:#595959;
+		font-family: 'Open Sans', sans-serif;
+		font-size: 0.9em;
+		text-transform: lowercase;
+		margin-left: 2em;
+		padding-bottom: 1em;
+		font-weight: 300;
+		width: 25em;
+	}
+
+	.welcomephoto{
+		display: none;
+	}
+}
+
+.welcomeabout:after{
+  display:block;
+  content: '';
+  width: 20em;
+  margin-left: 2em;
+  border-bottom: $LightPink 1px solid;
+}
+
+.welcomephotos{
+  display: flex;
+  margin-top: 1em;
+  justify-content: center;
+}
+
+
+section.artists{
+	width:100%;
+	margin-top:5em;
+	background-color:#f5f5f5;
+
+	
+	.artinfo h1{
+		text-align:center;
+ 		margin-top:2em;
+ 		font-size: 2em;
+ 		font-family:'Open Sans Condensed', sans-serif;
+  		text-transform: uppercase;
+  		margin-bottom:0;
+  		padding-top:1em;
+
+  		
+	}
+
+	.artinfo p{
+		text-align: center;
+		font-family: 'Open Sans', sans-serif;
+		font-size: 0.9em;
+		width: 25em;
+		text-transform: lowercase;
+		padding-bottom: 1em;
+		font-weight: 300;
+		margin:0 auto;
+		color:#595959;
+
+    
+	}
+
+	.portraitframe{
+		margin-left: 2em;
+
+		.aname{
+			text-decoration: none;
+			height: 2.5em;	
+			padding-left:1em;
+
+			& h1{	
+				font-size: 1.3em;
+				text-align:left;
+				text-transform:uppercase;
+				font-family: 'Open Sans', sans-serif;
+				color: $LightPink;
+				margin: 0;
+			}
+
+
+			& i{
+
+				color: #999;
+				cursor:pointer;
+			}
+		}
+
+		.triblock{
+			text-decoration: none;
+			height: 2.5em;	
+			padding-left:1em;
+
+			& h1{	
+				font-size: 1.3em;
+				text-align:left;
+				text-transform:uppercase;
+				font-family: 'Open Sans', sans-serif;
+				color: $LightPink;
+				margin: 0;
+			}
+
+
+			& i{
+
+				color: #999;
+
+			}
+		}
+
+		.drop-down{
+			
+			
+
+			.drop-down-content{
+
+				display: flex;
+				flex-wrap:wrap;
+				justify-content: space-around;
+				margin-bottom:1em;;
+				
+				.tattoo-img{
+					margin-top: 0.5em;
+					margin-left: 1em;
+					margin-bottom: 0.5em;
+					height: 8em;
+					flex: 0 0 100%;
+					
+				}
+
+
+				.jasper{
+					background-image:url(../assets/images/jaspermobile.jpg);
+					background-repeat:no-repeat;
+				}
+
+				.hannah{
+					background-image:url(../assets/images/hannahmobile.jpg);
+					background-repeat:no-repeat;
+				}
+
+				.minnie{
+					background-image:url(../assets/images/minniemobile.jpg);
+					background-repeat:no-repeat;
+				}
+
+				.phoebe{
+					background-image:url(../assets/images/phoebemobile.jpg);
+					background-repeat:no-repeat;
+				}
+
+
+
+
+				.stripe{
+					margin-top: 0.6em;
+					height: 0.1em;
+					width: 19em;
+					background-color:#ffcccc;
+					flex:0 0 85%;
+
+				}
+				
+				a{
+					text-decoration: none;
+					color: #ccc;
+				}
+
+				a:hover{
+					color: #ffcccc;
+				}
+
+				i{
+					
+					flex:0 0 5%;
+				}
+
+
+				p{
+
+				font-family:'Open Sans', sans-serif;
+				font-size: 0.8em;
+				text-align: left;
+				flex:0 0 90%;
+				}
+			}
+		}
+
+		.tri-drop{
+
+			display: flex;
+			flex-wrap:wrap;
+			justify-content: space-around;
+			margin-bottom: 1em;
+			
+			.tattoo-img{
+				margin-top: 0.5em;
+				margin-left: 1em;
+				margin-bottom: 0.5em;
+				height: 8em;				
+				flex: 0 0 100%;
+				
+			}
+
+			.tri{
+				background-image:url(../assets/images/trimobile.jpg);
+				background-repeat:no-repeat;
+			}
+
+
+			.stripe{
+				margin-top: 0.6em;
+				height: 0.1em;
+				width: 19em;
+				background-color:#ffcccc;
+				flex:0 0 85%;
+
+			}
+			
+			a{
+				text-decoration: none;
+				color: #ccc;
+			}
+
+			a:hover{
+				color: #ffcccc;
+			}
+
+			i{
+				
+				flex:0 0 5%;
+			}
+
+
+			p{
+
+			font-family:'Open Sans', sans-serif;
+			font-size: 0.8em;
+			text-align: left;
+			flex:0 0 90%;
+
+			}
+			
+		}
+	}
+
+}
+
+section.gallery-frame{
+
+    position: relative;
+    height: 100%;
+    width: 100%;    
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    color:#000;
+    margin: 0;
+    padding: 0;
+    margin-top:5em;
+
+    .gallery-info {
+    	
+    	h1{
+		text-align:center;
+ 		margin-top:2em;
+ 		font-size: 2em;
+ 		font-family:'Open Sans Condensed', sans-serif;
+  		text-transform: uppercase;
+  		margin-bottom:0;
+  		}
+
+  		p{
+		text-align: center;
+		font-family: 'Open Sans', sans-serif;
+		font-size: 0.9em;
+		text-transform: lowercase;
+		padding-bottom: 1em;
+		font-weight: 300;
+		width: 25em;
+		margin:0 auto;
+		color:#595959;
+
+    
+		}
+  	}
+
+	
+
+    .swiper-container {
+        width: 100%;
+        height: 100%;
+        margin-left: auto;
+        margin-right: auto;
+
+	    .swiper-slide {
+	        text-align: center;
+	        font-size: 18px;
+	
+	        /* Center slide text vertically */
+	        display: -webkit-box;
+	        display: -ms-flexbox;
+	        display: -webkit-flex;
+	        display: flex;
+	        -webkit-box-pack: center;
+	        -ms-flex-pack: center;
+	        -webkit-justify-content: center;
+	        justify-content: center;
+	        -webkit-box-align: center;
+	        -ms-flex-align: center;
+	        -webkit-align-items: center;
+	        align-items: center;
+
+	        img{
+	        	height: 15em;
+	        }
+	    }
+
+
+    }
+}
+
+
+section.FAQ{
+	width:100%;
+	margin-top:5em;
+	padding-left:1em;
+	padding-right:1em;
+	h1{
+		text-align:center;
+ 		font-family:'Open Sans Condensed', sans-serif;
+  		text-transform: uppercase;
+  		font-size:2em;
+  		
+  		
+	}
+
+	.answered{
+
+		border:#ccc solid 0.2em;
+
+		.faq-cont{
+			text-align: center;
+			margin-bottom: 1em;
+			pointer:cursor;
+
+		}
+
+		.Question{
+
+			padding:0.8em;
+		
+			h3{
+				font-size: 1em;
+				color:$LightPink;
+				margin:0;
+				font-weight: 300;
+				text-align: center;
+			}
+
+			p{
+				margin:0;
+				font-size: 0.8em;
+				margin-bottom: 1.3em;
+				text-align: center;
+			}
+
+			a{
+				text-decoration: none;
+				color:#999;
+			}
+
+			a:hover{
+				color: $LightPink;
+			}
+		}
+	}
+}
+
+section.contact{
+
+	margin-top:5em;
+	padding-top:2em;
+	padding-bottom:2em;
+	background-color:#f5f5f5;
+
+
+	h1{
+		text-align:center;
+ 		font-family:'Open Sans Condensed', sans-serif;
+  		text-transform: uppercase;
+  		font-size:2em;	
+  		margin-bottom:0;
+  		
+	}
+
+	p{
+		text-align: center;
+		font-family: 'Open Sans', sans-serif;
+		font-size: 0.9em;
+		padding-bottom: 1em;
+		font-weight: 300;
+		margin: 0;
+		color:#595959;
+	}
+
+	.contact-info{
+		display: flex;
+
+		// border:green solid 1px;
+		
+		.address{
+			width: 10em;
+			margin-left: 1em;
+			// border:red solid 1px;
+			p{
+				text-align: left;
+				i{
+					color: $LightPink;
+				}
+			}
+		}
+
+		.opening-times{
+			width: 10em;
+			// border:red solid 1px;
+			p{
+				text-align: left;
+				i{
+					color: $LightPink;
+				}
+			}
+		}
+
+		.phone{
+			width: 8em;
+			margin-left: 1em;
+			// border:red solid 1px;
+			p{
+				text-align: left;
+				i{
+					color: $LightPink;
+				}
+			}
+		}
+	}
+	
+
+	form{
+	
+		.form-group{
+
+			label{
+				display: block;
+				color: $LightPink;
+				margin-left: 1em;
+				font-weight: 300;
+
+			}
+
+			input{
+
+				width: 25em;
+				margin-left: 1em;
+			}
+
+			textarea{
+				width: 25em;
+				height: 10em;
+				margin-left: 1em;
+			}
+
+			select{
+				width: 25em;
+				margin-left: 1em;
+			}
+
+			#submit{
+				text-transform: uppercase;
+				color: #ffcccc;
+			}
+		}
+	}
+}
+
+section.Map{
+
+	iframe{
+		width: 100%;
+		
+	}
+}
+
+footer{
+	background-color:#f5f5f5;
+	height:3em;
+	padding-top:1em;
+
+	p{
+		color:$LightPink;
+		font-family: "Open Sans Condensed", sans-serif;
+		font-weight: 300;
+		text-transform:uppercase;
+		text-align: center;
+	}
+}
+
+@media only screen and (min-width: 40em){
+
+	section.welcome{
+	
+		.welcometitle{
+			text-align:center;
+			margin-left: 6em;
+			width: 25em;
+			height: 7em;
+
+			p{
+				font-size: 2em;
+			}
+
+			h1{
+				font-size: 2.5em;
+				margin-bottom:2em;
+			}
+		}
+
+		.welcomeabout{
+			
+			margin-left: 4em;
+			
+			p{
+				font-size: 1em;
+				
+				width:30em;
+			}	
+		}
+
+		.welcomeabout:after{
+				display:block;
+				content: '';
+				margin-top: 1em;
+				width: 28em;		
+		}
+	}
+
+	section.artists{
+
+		.artinfo{
+			
+			h1{
+				font-size: 2.5em;
+			}
+
+			p{
+				width: 30em;
+				font-size: 1em;
+				margin-bottom: 2em;
+			}
+		}
+
+		.portraitframe{
+
+			.triblock{
+				margin-left: 1em;
+			}
+
+			.tri-drop{
+				width:32em;
+				margin-left: 3em;
+
+				.tri{
+					background-image:url(../assets/images/triportrait.jpg);
+					height: 13em;
+				}
+			}
+
+			.aname{
+				margin-left: 1em;
+			}
+
+			.drop-down{
+				width:32em;
+				margin-left: 3em;
+				
+				.drop-down-content{
+
+					.tattoo-img{
+						height:12em;
+					}
+					
+					.jasper{
+						background-image:url(../assets/images/jasportrait.jpg);
+					}
+
+					.hannah{
+
+						background-image:url(../assets/images/hannahportrait.jpg);										
+					}
+
+					.minnie{
+
+						background-image:url(../assets/images/minnieportrait.jpg);
+					}
+
+					.phoebe{
+
+						background-image:url(../assets/images/phoebeportrait.jpg);
+					}
+				}
+			}
+		}
+	}
+
+	section.gallery-frame{
+
+		.gallery-info{
+
+			h1{
+				font-size: 2.5em;
+			}
+
+			p{
+				width: 30em;
+				font-size: 1em;
+				
+				margin-bottom: 2em;
+			}
+		}
+	}
+
+	section.contact{
+
+		h1{
+			font-size: 2.5em;
+		}
+
+		p{
+			width: 30em;
+			font-size: 1em;
+			margin:0 auto;
+			margin-bottom: 2em;
+		}
+
+		.contact-info{
+			width: 30em;
+			margin:0 auto;
+			
+		}
+
+
+		form{
+			
+			width: 45em;
+			margin:0 auto;
+			display: flex;
+			flex-wrap: wrap;
+
+			.form-group{
+
+				input{
+					width: 21em;
+				}
+
+				select{
+					width: 21.2em;
+				}
+
+				textarea{
+					width: 43em;
+				}
+
+				input#submit{
+					width: 43em;
+				}
+			}
+		}
+	}
+
+	section.Map{
+
+		iframe{
+			width: 100%;
+		}
+	}
+}
+
+@media only screen and (min-width: 60em){
+
+	
+	nav{
+
+		.fold{
+			display: none;
+		}
+
+		.nav-hide{
+		
+			//position:relative;
+			top:0em !important;
+
+		}
+
+		.no-hide{
+		
+			position:relative;
+			background-color:transparent;
+			display: flex;
+			justify-content: flex-end;
+			margin-right:3em;
+			margin-top:1em;
+
+
+			li{
+				display: inline-block;
+				width: 8%;
+				flex:0 0 5em;
+				border-bottom:transparent;
+
+				a{
+					font-size: 1.2em;
+					height: 100%;
+					width:100%;
+					color:white;
+					text-transform: uppercase;
+				}
+			}
+		}
+	}
+
+
+	section.welcome{
+
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		height: auto;
+		
+		.welcome-container{
+			flex: 1 0 50%;
+
+			.welcometitle{
+				margin:0;
+				margin-left: 2em;
+				margin-bottom: 1em;
+				width: 25em;
+
+				p{
+					text-align: left;
+				}
+
+				h1{
+					text-align: left;
+					margin:0;
+				}
+			}
+
+			.welcomeabout{
+				
+				margin:0;
+				
+				p{
+					width: 30em;
+					text-align: left;
+				}
+			}
+
+			.welcomeabout:after{
+				display:block;
+				content: '';
+				margin-top: 1em;
+				width: 23em;
+			}		
+		}	
+
+		.welcome-photo{
+			// border:1px red solid;
+			
+			margin-top: 0.5em;
+			margin-left: 8em;
+			height:35em;
+			flex:0 0 20%;
+
+
+			.wphoto{
+				// border:1px red solid;
+				width: 20em;
+				height: 10em;
+				margin-top: 1em;
+			}
+
+			:nth-child(1){
+				background-image:url(../assets/images/wpic01.jpg);
+				background-repeat:no-repeat;
+			}
+			:nth-child(2){
+				background-image:url(../assets/images/wpic02.jpg);
+				background-repeat:no-repeat;
+			}
+			:nth-child(3){
+				background-image:url(../assets/images/wpic03.jpg);
+				background-repeat:no-repeat;
+			}
+		}
+	}	
+
+
+	section.artists{
+
+
+		.portraitframe{
+
+			.triblock{
+				margin-left: 11em;
+			}
+
+			.tri-drop{
+				// border:red solid 1px;
+				margin:0 auto;
+				width: 55em;
+				display: flex;
+				flex-wrap: wrap;
+				align-content: center;
+
+				.tattoo-img{
+					
+					flex:0 0 50em;
+					height: 15em;
+					margin-left: 2em;
+				}
+
+				.stripe{
+					flex:0 0 85%;
+					height: 0.2em;
+					
+					margin-left: 3em;	
+				}
+
+				.social-media{
+					display: flex;
+					flex-wrap: wrap;
+					flex:0 0 4em;
+					margin-bottom:2em;
+					margin-left: 0.5em;
+					
+					.fa-instagram{
+						flex:1 0 100%;
+						margin-right: 0.5em;
+					}
+
+					.fa-faceook-square{
+						flex:1 0 100%;
+					}
+					
+					a{
+						
+						height: 1em;
+					}	
+
+				}
+
+				p{
+
+					// border:solid 1px red;
+					flex:0 0 50em;
+					margin-left:1em;
+					font-size: 0.9em;
+					text-align:left;
+				}
+
+			}
+
+			.staff-about{
+				// width: 55em;
+				// border:red solid 1px;
+				margin-top: 3em;
+				padding-bottom:3em;
+				display: flex;
+				flex-wrap: wrap;
+
+				.aname{
+					margin-left: 11em;
+					flex:0 0 20em;
+					// border:purple solid 1px;
+				}
+
+				.drop-down{
+					display: flex;
+					// flex-wrap: wrap;
+					// display: block !important ; 
+					// border:1px blue solid;
+					margin-left: 12em;
+					width: 52em;
+					display: flex;
+					flex-wrap: wrap;
+					align-content: center;
+
+					.tattoo-img{
+						
+						flex:0 0 50em;
+						height: 15em;
+						margin-left: 2em;
+					}
+
+					.stripe{
+						flex:0 0 85%;
+						height: 0.2em;
+						
+						margin-left: 3em;	
+					}
+
+					.social-media{
+						display: flex;
+						flex-wrap: wrap;
+						flex:0 0 4em;
+						margin-bottom:2em;
+						margin-left: 0.5em;
+						
+						.fa-instagram{
+							flex:1 0 100%;
+							margin-right: 0.5em;
+						}
+
+						.fa-faceook-square{
+							flex:1 0 100%;
+						}
+						
+						a{
+							
+							height: 1em;
+						}	
+
+					}
+
+					p{
+
+						// border:solid 1px red;
+						flex:0 0 50em;
+						margin-left:1em;
+						font-size: 0.9em;
+						text-align:left;
+					}
+
+
+				}
+
+			}
+		}
+	}
+
+	section.gallery-frame{
+
+		.swiper-container{
+			margin:0 auto;
+		}
+
+	}
+
+	section.FAQ{
+
+		.answered{
+
+			width: 50em;
+			margin:0 auto;
+			// border:green solid 1px;
+
+			.faq-cont{
+				display: none;
+			}
+
+			.faq-drop-down{
+				display: block !important;
+				padding-bottom:2em;
+			}
+
+			.Question{
+
+				h3{
+					font-size:1.2em;
+				}
+
+				p{
+					margin:0 auto;
+					font-size:0.9em;
+					width: 43em;
+					
+				}
+			}
+		}
+	}
+
+	section.Map{
+
+		//iframe
+		.location{
+			width: 100%;
+		}
+	}
+
+}
+
+@media only screen and (min-width: 80em){
+
+	header{
+
+		nav{
+			.no-hide{
+				margin-right: 5%;
+			}
+		}
+
+		h1{
+			margin-left: 8%;
+		}
+	}
+
+	section.welcome{
+
+		padding-left:20%;
+		
+	}
+
+	section.artists{
+
+		.artinfo{
+
+			h1{
+				font-size:3.5em;
+			}
+		}
+
+		.portraitframe{
+
+			.triblock{
+				padding-left: 20%;
+
+				h1{
+					font-size:1.5em;
+				}
+			}
+
+			.tri-drop{
+
+				.tri{
+					background-image:url(../assets/images/trifull.jpg);
+				}
+			}
+
+			.staff-about{
+				margin-left: 24%;
+				padding-left:5%;
+				width: 50%;
+				// border:red solid 1px;	
+				
+				.staff-container{
+					
+					flex:0 0 50%;
+
+					.aname{
+						margin-left: 0;
+						// border:red solid 1px;
+
+						h1{
+							font-size:1.5em;
+						}
+					}
+					
+					.drop-down{
+						margin-left: 0;
+						// display: block !important;
+
+
+						.jasper{
+							background-image:url(../assets/images/jasfull.jpg);
+						}
+
+						.hannah{
+							background-image:url(../assets/images/hannahfull.jpg);
+
+						}
+
+						.minnie{
+							background-image:url(../assets/images/minniefull.jpg);
+
+						}
+						
+						.phoebe{
+							background-image:url(../assets/images/phoebefull.jpg);
+
+						}
+					}	
+				}				
+			}
+		}
+	}
+
+	section.gallery-frame{
+
+		.swiper-container{
+
+			.swiper-wrapper{
+				
+				.swiper-slide{
+
+					img{
+						height: 25em;
+					}
+				}
+			}
+		}
+	}
+
+	section.Map{
+
+
+		iframe{
+			width: 100%;
+		}
+	}
+}
+
+
+
+
+

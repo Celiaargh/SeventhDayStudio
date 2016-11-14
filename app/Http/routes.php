@@ -19,6 +19,16 @@ Route::get('front', function(){
 	return view('main');
 });
 
+Route::get('test', function(){
+	// $images = App\Models\Image::where('imageable_type','gallery')->get();
+
+	// return $images;
+
+	$artist = App\Models\Artist::find(1);
+
+	return $artist->images;
+});
+
 
 
 

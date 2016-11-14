@@ -10,7 +10,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300i,700" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.css">
-	<link rel="stylesheet" href="{{asset('css/style.css')}}">
+	<link rel="stylesheet" href="{{asset('css/app.css')}}">
 </head>
 <body>
 
@@ -91,7 +91,7 @@
 								<div class="{{$artist->photo}} tattoo-img"></div>
 								<div class="stripe"></div> 
 								<div class="social-media">
-									<a href="https://www.instagram.com/tritoan_seventhday/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+									<a href="{{$artist->instagram}}"><i class="fa fa-instagram" aria-hidden="true"></i></a>
 									<a href="https://www.facebook.com/tritoanlyink/"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
 								</div>
 								
@@ -116,11 +116,9 @@
 
 			<div class="swiper-container">
         		<div class="swiper-wrapper">
-	            <div class="swiper-slide"><img src="assets/images/slide01.jpg" alt=""></div>
-	            <div class="swiper-slide"><img src="assets/images/slide02.jpg" alt=""></div>
-	            <div class="swiper-slide"><img src="assets/images/slide03.jpg" alt=""></div>
-	            <div class="swiper-slide"><img src="assets/images/slide04.jpg" alt=""></div>
-	            <div class="swiper-slide"><img src="assets/images/slide05.jpg" alt=""></div>
+        		@foreach(App\Models\Image::where('imageable_type','gallery')->get() as $image)
+	            	<div class="swiper-slide"><img src="{{url('assets/images/'.$image->url)}}" alt=""></div>
+	            @endforeach
 	            
         	</div>
 		       
@@ -132,45 +130,42 @@
 			<div class="answered">
 				<h1>FAQ</h1>
 			
-			@foreach($faqs as $faq)
-				<div class="Question">
-					<h3>{{$faq->question}}</h3>
-					<p>
-						{{$faq->answer}}
-					</p>
-				</div>
-			@endforeach
+			<?php
+
+			$firstFour = '';
+			$theRest = '';
+
+			foreach($faqs as $index=>$faq){
+
+				if($index<4){
+					$firstFour .= '<div class="Question">
+							<h3>'.$faq->question.'</h3>
+							<p>
+								'.$faq->answer.'
+							</p>
+						</div>';
+
+				}else{
+
+					$theRest .= '<div class="Question">
+							<h3>'.$faq->question.'</h3>
+							<p>
+								'.$faq->answer.'
+							</p>
+						</div>';
+
+				}
+			}
+			?>
+				
+
+
+				{!! $firstFour!!}
 					
 				<div class="faq-cont" data-state="close"><i class="fa fa-chevron-down"></i></div>
-
+				
 				<div class="faq-drop-down">
-
-					<div class="Question">
-						<h3>Do you have a minimum fee?</h3>
-						<p>
-							Our minimum fee is $150, which goes towards disposables and setting up
-						</p>
-					</div>
-					
-					<div class="Question">
-						<h3>How do i prep myself for a tattoo</h3>
-						<p>
-							Being well rested the night before your appointment is vital. You will find your pain tolerance is a lot higher when you are feeling at your best. Have a good breakfast and stock up on sugar as it will prevent you from fainting.
-						</p>
-					</div>
-
-					<div class="Question">
-						<h3>Can I bring a friend?</h3>
-						<p>
-							Anyone is welcome to come along with you, but they will have to wait in the foyer during your session as we would prefer to work without distractions 
-						</p>
-					</div>
-					<div class="Question">
-						<h3>Age restriction?</h3>
-						<p>
-							A signed consent from your parent or caregiver is required if you are under the age of 18. Studio policy.
-						</p>
-					</div>
+					{!! $theRest!!}
 				</div>
 
 			</div>
@@ -185,33 +180,23 @@
 			<div class="contact-info">
 
 		 		<div class="address">
-		 			
-		 			<p>
-		 				<i class="fa fa-home"></i>
-					 	7 Gundry street <br>
-					 	Auckland City
-					</p>
+		 			{!!App\Models\Content::find(5)->content!!}
+		
 		 		</div>
 
 		 		<div class="opening-times">
-		 			
-		 			<p>
-		 				<i class="fa fa-clock-o"></i>
-		 				Tuesday - Saturday <br> 11am-6pm 
-		 			</p>
+		 			{!!App\Models\Content::find(6)->content!!}
+		 		
 		 		</div>
 
 				<div class="phone">
-					
-					<p>
-						<i class="fa fa-phone"></i>
-						09 354 4549
-					</p>
+					{!!App\Models\Content::find(7)->content!!}
+				
 				</div>
 			</div>
 
 			<form class="form" action="#">
-
+			
 				<div class="form-group">
 					<label for="firstname">First Name</label>
 					<input class="form-control" type="text" id="firstname" name="firstname" >
