@@ -195,62 +195,65 @@
 				</div>
 			</div>
 
-			<form class="form" action="#">
-			
+			{!! Form::open(['url'=>'front'])!!}
 				<div class="form-group">
-					<label for="firstname">First Name</label>
-					<input class="form-control" type="text" id="firstname" name="firstname" >
+					{{Form::label('firstname','First Name')}}
+					{!! Form::text('firstname',null,['class'=>'form-control'],['id'=>'firstname'],['name'=>'firstname']) !!}
 				</div>
 
 				<div class="form-group">
-					<label for="lastname">Last Name</label>
-					<input class="form-control" type="text" id="lastname" name="lastname" >
+					{{Form::label('lastname','Last Name')}}
+					
+					{!! Form::text('lastname',null,['class'=>'form-control'],['id'=>'lastname'],['name'=>'lastname']) !!}
+					
 				</div>
 
 				<div class="form-group">
-					<label for="email">Email</label>
-					<input class="form-control" type="text" id="email" name="email" p>
+					{{Form::label('email','Email')}}
+
+					{!! Form::text('email',null,['class'=>'form-control'],['id'=>'email'],['name'=>'email']) !!}
+				
 				</div>
 
 				<div class="form-group">
-					<label for="pre-fartist">Preferred Artist</label>
-					<select name="pref-artist" id="drop-down" class="form-control">
-						<option value="none">Please Select</option>
-						<option value="tritoan">Tritoan Ly</option>
-						<option value="jasper">Jasper Andres</option>
-						<option value="hannah">Hannah Nova</option>
-						<option value="minnie">Minnie Faselow</option>
-						<option value="phoebe">Phoebe Hunter</option>
-					</select>
+					{{Form::label('pref-artist','Preferred Artist')}}
+
+					{!! Form::select('pref-artist',['None'=>'Please Select','1'=>'Tritoan Ly','2'=>'Jasper Andres', '3'=>'Hannah Nova','4'=>'Minnie Faselow','5'=>'Phoebe Hunter'],null,['class'=>'form-control']) !!}
 				</div>
 				
 				<div class="form-group">
-					<label for="message">Message</label>
-					<textarea class="form-control" type="text" id="email" name="email"></textarea>
+					{{Form::label('message','Message')}}
+					{!! Form::textarea('content',null,['class'=>'form-control']) !!}
+					
 				</div>
 				
 				<div class="form-group">
 					<input type="submit" value="Submit" class="form-control" id="submit">
 				</div>
-
-			</form>
+			{!! Form::close() !!}
+		
 			
 		</section>
 	</main>
 
 	<section class="Map">
 
-		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3192.2621933249684!2d174.75180971529159!3d-36.860142479936286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d0d47c0209807f7%3A0x4f0a0a4675c68f36!2s7+Gundry+St%2C+Auckland%2C+1010!5e0!3m2!1sen!2snz!4v1476157560445" width="670" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+		<div id="location"></div>
+
+	{{-- 	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3192.2621933249684!2d174.75180971529159!3d-36.860142479936286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d0d47c0209807f7%3A0x4f0a0a4675c68f36!2s7+Gundry+St%2C+Auckland%2C+1010!5e0!3m2!1sen!2snz!4v1476157560445" width="670" height="450" frameborder="0" style="border:0" allowfullscreen></iframe> --}}
 	</section>
 
 	<footer>
 		<p><i class="fa fa-copyright" aria-hidden="true"></i> Seventh Day Studio 2016</p>
 	</footer>
+	
+	
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.js"></script>
-
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCg6g9B1DEre7nVpANwgJpGXFo1urUeIm4&callback=initMap"
+        async defer></script>
 	<script src="{{asset('Javascript/javascript.js')}}"></script>
 </body>
 </html>

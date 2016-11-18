@@ -41,3 +41,20 @@ Route::get('front',function(){
 });
 
 
+Route::get('/admin/login',function(){
+	return view('adminlogin');
+});
+
+
+//-------Contact us email
+
+// Route::post('front',function(){
+
+// 	$data = Request::all();
+
+// 	Mail::send('emailtemplate',$data,function($message){
+
+// 		$message->from('','system');
+// 		$message->to('');
+// 	});
+// });

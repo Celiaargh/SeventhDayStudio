@@ -101,10 +101,60 @@ $(function(){
 		$('.nav-hide').animate({top:"-20em"}, 500);
 	});
 
-	//Geo Location---------------------------------
-
-	
 
 });
+
+
+	//Geo Location---------------------------------
+	function initMap(){
+
+		if(navigator.geolocation){
+
+			navigator.geolocation.getCurrentPosition(function(position){
+
+				var myLocation ={
+					lat: position.coords.latitude,
+					lng: position.coords.longitude
+				};
+
+				var map = new google.maps.Map(document.getElementById('location'),{
+					zoom: 16,
+					center: myLocation
+				});	
+
+				var marker = new google.maps.Marker({
+					position: myLocation,
+					map: map
+				});
+
+
+				//directions
+
+				var myDestination = {
+					lat:-36.860125,
+		 			lng:174.754012
+				};
+
+				var request = {
+					origin: myLocation,
+		 			destination: myDestination,
+		 			travelMode: google.maps.TravelMode.DRIVING
+				}
+
+				var directionsService = new google.maps.DirectionsService();
+				directionsService.route(request,function(result,status){
+
+					if(status == google.maps.DirectionsStatus.OK){
+
+
+						var directionsDisplay = new google.maps.DirectionsRenderer({map:map});
+						directionsDisplay.setDirections(result);
+					}
+				});
+
+
+			});
+		}
+	}
 
 	
