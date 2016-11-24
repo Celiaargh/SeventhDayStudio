@@ -19,6 +19,16 @@ Route::get('front', function(){
 	return view('main');
 });
 
+Route::get('adminfront', function(){
+
+	$artist = App\Models\Artist::all();
+	$faq = App\Models\Faq::all();
+
+	return view('adminmain',['artists'=>$artist],['faqs'=>$faq]);
+});
+
+
+
 Route::get('test', function(){
 	// $images = App\Models\Image::where('imageable_type','gallery')->get();
 
@@ -30,8 +40,6 @@ Route::get('test', function(){
 });
 
 
-
-
 Route::get('front',function(){
 
 	$artist = App\Models\Artist::all();
@@ -41,9 +49,13 @@ Route::get('front',function(){
 });
 
 
-Route::get('/admin/login',function(){
-	return view('adminlogin');
-});
+
+Route::resource('users','UserController');
+Route::get('login','LoginController@showLoginForm');
+Route::post('login','LoginController@processLogin');
+Route::get('logout','LoginController@logout');
+
+
 
 
 //-------Contact us email

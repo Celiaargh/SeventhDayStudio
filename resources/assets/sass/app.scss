@@ -685,51 +685,101 @@ footer{
 //Admin Login
 
 body.admin{
-	background-color:#f5f5f5;
 
 
 	section.login{
-	background-color:white;
-	width:25em;
-	border-radius:0.5em;
-	border:red solid 1px;
-	margin:0 auto;
+	background-color:#fff;
+	margin:20em auto;
+	padding:0 10%;
 
 		
-		h1{
+		.login-header{
+			h1{
 			font-size: 2em;
+			color:#ccc;
+			text-transform:uppercase;
+			}
+
+			p{
+				text-transform:uppercase;
+			}
 		}
 
-
-
-	
 		form.adminlog{
-			border:red solid 1px;
 			
 
 			#login-group{
 				display: flex;
 				flex-wrap: wrap;
 				justify-content: center;
-				i{
-					font-size: 2em;
-					margin-right: 0.5em; 
-					color: #ffcccc;
-				}
+
 
 				input{
-					width: 20em;
+					width: 23em;
+					height:3em;
+					border-radius:0;
 				}
 
-				#submit{
-					width:23em;
+				#login{
+					width:20em;
+					background-color:#ffcccc;
+					border:transparent;
+					color:#fff;
+					
 
 				}
 			}
 		}
 	}
 
+}
 
+body.admin-signup{
+
+	section.signup{
+	background-color:#fff;
+	margin:20em auto;
+	padding:0 10%;
+
+		
+		.signup-header{
+			h1{
+			font-size: 2em;
+			color:#ccc;
+			text-transform:uppercase;
+			}
+
+			p{
+				text-transform:uppercase;
+			}
+		}
+
+		form.admin-signup{
+			
+
+			#signup-group{
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+
+
+				input{
+					width: 23em;
+					height:3em;
+					border-radius:0;
+				}
+
+				#submit{
+					width:20em;
+					background-color:#ffcccc;
+					border:transparent;
+					color:#fff;
+					
+
+				}
+			}
+		}
+	}
 }
 
 
@@ -907,10 +957,14 @@ body.admin{
 		}
 	}
 
-	section.Map{
 
-		iframe{
-			width: 100%;
+	body.admin{
+
+
+		section.login{
+			.login-header{
+				margin-left: 20%;
+			}
 		}
 	}
 }
@@ -1219,10 +1273,22 @@ body.admin{
 		}
 	}
 
-	section.Map{
+	body.admin{
 
-		iframe{
-			width: 100%;
+
+		section.login{
+			.login-header{
+				margin-left: 30%;
+			}
+		}
+	}
+
+	body.admin-signup{
+
+		section.signup{
+			.signup-header{
+				margin-left: 30%;
+			}
 		}
 	}
 
@@ -1339,13 +1405,24 @@ body.admin{
 		}
 	}
 
-	section.Map{
+	body.admin{
 
-
-		iframe{
-			width: 100%;
+		section.login{
+			.login-header{
+				margin-left: 40%;
+			}
 		}
 	}
+
+	body.admin-signup{
+
+		section.signup{
+			.signup-header{
+				margin-left: 40%;
+			}
+		}
+	}
+
 }
 
 

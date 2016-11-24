@@ -448,33 +448,59 @@ footer {
     text-transform: uppercase;
     text-align: center; }
 
-body.admin {
-  background-color: #f5f5f5; }
-  body.admin section.login {
-    background-color: white;
-    width: 25em;
-    border-radius: 0.5em;
-    border: red solid 1px;
-    margin: 0 auto; }
-    body.admin section.login h1 {
-      font-size: 2em; }
-    body.admin section.login form.adminlog {
-      border: red solid 1px; }
-      body.admin section.login form.adminlog #login-group {
-        display: -ms-flexbox;
-        display: flex;
-        -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-        -ms-flex-pack: center;
-        justify-content: center; }
-        body.admin section.login form.adminlog #login-group i {
-          font-size: 2em;
-          margin-right: 0.5em;
-          color: #ffcccc; }
-        body.admin section.login form.adminlog #login-group input {
-          width: 20em; }
-        body.admin section.login form.adminlog #login-group #submit {
-          width: 23em; }
+body.admin section.login {
+  background-color: #fff;
+  margin: 20em auto;
+  padding: 0 10%; }
+  body.admin section.login .login-header h1 {
+    font-size: 2em;
+    color: #ccc;
+    text-transform: uppercase; }
+  body.admin section.login .login-header p {
+    text-transform: uppercase; }
+  body.admin section.login form.adminlog #login-group {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-pack: center;
+    justify-content: center; }
+    body.admin section.login form.adminlog #login-group input {
+      width: 23em;
+      height: 3em;
+      border-radius: 0; }
+    body.admin section.login form.adminlog #login-group #login {
+      width: 20em;
+      background-color: #ffcccc;
+      border: transparent;
+      color: #fff; }
+
+body.admin-signup section.signup {
+  background-color: #fff;
+  margin: 20em auto;
+  padding: 0 10%; }
+  body.admin-signup section.signup .signup-header h1 {
+    font-size: 2em;
+    color: #ccc;
+    text-transform: uppercase; }
+  body.admin-signup section.signup .signup-header p {
+    text-transform: uppercase; }
+  body.admin-signup section.signup form.admin-signup #signup-group {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-pack: center;
+    justify-content: center; }
+    body.admin-signup section.signup form.admin-signup #signup-group input {
+      width: 23em;
+      height: 3em;
+      border-radius: 0; }
+    body.admin-signup section.signup form.admin-signup #signup-group #submit {
+      width: 20em;
+      background-color: #ffcccc;
+      border: transparent;
+      color: #fff; }
 
 @media only screen and (min-width: 40em) {
   section.welcome .welcometitle {
@@ -557,8 +583,8 @@ body.admin {
       width: 43em; }
     section.contact form .form-group input#submit {
       width: 43em; }
-  section.Map iframe {
-    width: 100%; } }
+  body.admin section.login .login-header {
+    margin-left: 20%; } }
 
 @media only screen and (min-width: 60em) {
   nav .fold {
@@ -752,8 +778,10 @@ body.admin {
       margin: 0 auto;
       font-size: 0.9em;
       width: 43em; }
-  section.Map iframe {
-    width: 100%; } }
+  body.admin section.login .login-header {
+    margin-left: 30%; }
+  body.admin-signup section.signup .signup-header {
+    margin-left: 30%; } }
 
 @media only screen and (min-width: 80em) {
   header nav .no-hide {
@@ -793,7 +821,9 @@ body.admin {
           background-image: url(../assets/images/phoebefull.jpg); }
   section.gallery-frame .swiper-container .swiper-wrapper .swiper-slide img {
     height: 25em; }
-  section.Map iframe {
-    width: 100%; } }
+  body.admin section.login .login-header {
+    margin-left: 40%; }
+  body.admin-signup section.signup .signup-header {
+    margin-left: 40%; } }
 
 /*# sourceMappingURL=app.css.map */

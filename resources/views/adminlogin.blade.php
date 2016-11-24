@@ -12,25 +12,30 @@
 	
 
 	<section class="login">
-		<h1>Seventh Day Studio</h1>
-		<p>Admin Login</p>
+		<div class="login-header">
+			<h1>Seventh Day Studio</h1>
+			<p>Admin Login</p>
+		</div>
 
-		<form class="adminlog" action="#">
+
+		
+		{!! Form::open (['url'=>'login','class'=>'adminlog']) !!}
 
 			<div class="form-group" id="login-group">
-				<i class="fa fa-user" aria-hidden="true"></i>
-				<input class="form-control" type="text" id="username" name="username" placeholder="Username" >
+
+				{!! Form::text('username',null,['placeholder'=>' Username'],['class'=>'form-control'],['id'=>'username']) !!}
 			</div>
 
 			<div class="form-group" id="login-group">
-				<i class="fa fa-lock"></i>
-				<input class="form-control" type="text" id="password" name="password" placeholder="Password">
+				
+				{!! Form::text('password',null,['placeholder'=>' Password'],['class'=>'form-control'],['id'=>'password']) !!}
 			</div>
 
 			<div class="form-group" id="login-group">
-				<input type="submit" value="Submit" class="form-control" id="submit">
+				<input type="submit" value="LOGIN" class="form-control" id="login">
 			</div>
-		</form>
+		{!! Form::close() !!}
+		
 	</section>
 
 
