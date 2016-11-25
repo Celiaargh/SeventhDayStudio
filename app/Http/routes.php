@@ -27,6 +27,10 @@ Route::get('adminfront', function(){
 	return view('adminmain',['artists'=>$artist],['faqs'=>$faq]);
 });
 
+Route::get('newfaq',function(){
+	return view('newfaq');
+});
+
 
 
 Route::get('test', function(){
@@ -48,9 +52,15 @@ Route::get('front',function(){
 	return view('main',['artists'=>$artist],['faqs'=>$faq]);
 });
 
+// Route::delete('faq/{id}', function($id){
 
+
+// })
 
 Route::resource('users','UserController');
+Route::resource('faq','FaqsController');
+
+
 Route::get('login','LoginController@showLoginForm');
 Route::post('login','LoginController@processLogin');
 Route::get('logout','LoginController@logout');

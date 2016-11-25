@@ -18,15 +18,31 @@
 		<nav class="menu">
 			<button class="fold"><i class="fa fa-bars" aria-hidden="true"></i></button>
 			<ul class="nav-hide no-hide">
-				<li><a href="{{url('/users/create')}}">New Admin</a></li>
-				<li><a href="">Edit Admin Details</a></li>
-				<li><a href="{{url('logout')}}">Logout</a></li>
+				<li><a data-target=".header" href="">Home</a></li>
+				<li><a data-target=".welcome" href="">Welcome</a></li>
+				<li><a data-target=".artists" href="">Artists</a></li>
+				<li><a data-target=".FAQ" href="">FAQ</a></li>
+				<li><a data-target=".gallery-frame" href="">Gallery</a></li>
+				<li><a data-target=".contact" href="">Contact</a></li>
 			</ul>
 		</nav>
-		<h1>Seventh Day Studio Admin</h1>
+		<h1>Seventh Day Studio</h1>
 	</header>
 
 	<main>
+		
+		<section class="admin-info">
+			<h1>Seventh Day Studio Admin Page</h1>
+			<p>To edit any section simply click on the text or click on the links</p>
+
+			<div class="admin-links">
+				<li><a href="{{url('/users/create')}}">New Admin</a></li>
+				<li><a href="">Edit Admin Details</a></li>
+				<li><a href="{{url('logout')}}">Logout</a></li>
+			</div>
+
+		</section>
+
 		<section class="welcome">
 
 			<div class="welcome-photo">
@@ -56,6 +72,9 @@
 				<p>
 					our talented and harding working artists who you'll surely love.
 				</p>
+				<div class="Edit-Artists">
+					<a href="">Add an Artist</a>
+				</div>
 			</div>
 				
 				
@@ -125,7 +144,12 @@
 
 		<section class="FAQ">
 			<div class="answered">
+
 				<h1>FAQ</h1>
+				<div class="Edit-Faq">
+					<p>Click on text to edit each question and answer</p>
+					<p><a href="{{url('newfaq')}}">Add a faq</a></p>
+				</div>
 			
 			<?php
 
@@ -140,6 +164,8 @@
 							<p>
 								'.$faq->answer.'
 							</p>
+						
+							
 						</div>';
 
 				}else{
@@ -149,6 +175,7 @@
 							<p>
 								'.$faq->answer.'
 							</p>
+							
 						</div>';
 
 				}

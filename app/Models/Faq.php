@@ -3,12 +3,17 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Faq extends Model
 {
     //
-     protected $fillable = [
+	use SoftDeletes;
+   protected $dates = ['deleted_at'];
+
+    protected $fillable = [
         'question', 'answer',
     ];
    
+
 }

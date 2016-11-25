@@ -347,6 +347,10 @@ section.FAQ {
     font-family: 'Open Sans Condensed', sans-serif;
     text-transform: uppercase;
     font-size: 2em; }
+  section.FAQ .Edit-Faq p {
+    color: #999;
+    text-align: center;
+    margin: 0; }
   section.FAQ .answered {
     border: #ccc solid 0.2em; }
     section.FAQ .answered .faq-cont {
@@ -360,12 +364,13 @@ section.FAQ {
         color: #ff9999;
         margin: 0;
         font-weight: 300;
-        text-align: center; }
+        margin-left: 0;
+        text-align: left; }
       section.FAQ .answered .Question p {
         margin: 0;
         font-size: 0.8em;
         margin-bottom: 1.3em;
-        text-align: center; }
+        text-align: left; }
       section.FAQ .answered .Question a {
         text-decoration: none;
         color: #999; }
@@ -558,6 +563,9 @@ body.admin-signup section.signup {
     width: 30em;
     font-size: 1em;
     margin-bottom: 2em; }
+  section.FAQ .answered .Question {
+    margin: 0 auto;
+    width: 40em; }
   section.contact h1 {
     font-size: 2.5em; }
   section.contact p {
