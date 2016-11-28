@@ -97,7 +97,7 @@ class UserController extends Controller
     {
         //
 
-        $user = User('editadmin',['user'=>$user]);
+        $user = User('editdetails',['user'=>$user]);
     }
 
     /**

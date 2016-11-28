@@ -368,10 +368,10 @@ section.artists{
 
 				p{
 
-				font-family:'Open Sans', sans-serif;
-				font-size: 0.8em;
-				text-align: left;
-				flex:0 0 90%;
+					font-family:'Open Sans', sans-serif;
+					font-size: 0.8em;
+					text-align: left;
+					flex:0 0 90%;
 				}
 			}
 		}
@@ -699,6 +699,14 @@ footer{
 		text-transform:uppercase;
 		text-align: center;
 	}
+}
+
+#token{
+	display:none;
+}
+
+#public{
+	display:none;
 }
 
 //Admin Login
@@ -1260,7 +1268,7 @@ body.admin-signup{
 						// border:solid 1px red;
 						flex:0 0 50em;
 						margin-left:1em;
-						font-size: 0.9em;
+						font-size: 0.5em;
 						text-align:left;
 					}
 

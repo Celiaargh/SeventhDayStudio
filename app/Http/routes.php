@@ -31,6 +31,10 @@ Route::get('newfaq',function(){
 	return view('newfaq');
 });
 
+Route::get('details',function(){
+	return view('admindetails');
+});
+
 
 
 Route::get('test', function(){
@@ -52,11 +56,6 @@ Route::get('front',function(){
 	return view('main',['artists'=>$artist],['faqs'=>$faq]);
 });
 
-// Route::delete('faq/{id}', function($id){
-
-
-// })
-
 Route::resource('users','UserController');
 Route::resource('faq','FaqsController');
 
@@ -70,13 +69,13 @@ Route::get('logout','LoginController@logout');
 
 //-------Contact us email
 
-// Route::post('front',function(){
+Route::post('front',function(){
 
-// 	$data = Request::all();
+	$data = Request::all();
 
-// 	Mail::send('emailtemplate',$data,function($message){
+	Mail::send('emailtemplate',$data,function($message) use ($data) {
 
-// 		$message->from('','system');
-// 		$message->to('');
-// 	});
-// });
+		$message->from($data['email'],$data['firstname']);
+		$message->to('TestSeventh@gmail.com')->subject('Hello');;
+	});
+});

@@ -37,7 +37,7 @@
 
 			<div class="admin-links">
 				<li><a href="{{url('/users/create')}}">New Admin</a></li>
-				<li><a href="">Edit Admin Details</a></li>
+				<li><a href="{{url('')}}">Admin Details</a></li>
 				<li><a href="{{url('logout')}}">Logout</a></li>
 			</div>
 		</section>
@@ -52,7 +52,7 @@
 		
 			<div class="welcome-container">
 				<div class="welcometitle">
-			
+					
 					{!!App\Models\Content::find(1)->content!!}
 				</div>
 
@@ -103,7 +103,7 @@
 						</div>
 						<div class="drop-down">
 							<div class="drop-down-content">
-							<img src="{{url('assets/images/'.$artist->photo)}}" alt="" class="tattoo-img">
+								<img src="{{url('assets/images/'.$artist->photo)}}" alt="" class="tattoo-img">
 								<div class="stripe"></div> 
 								<div class="social-media">
 									<a href="{{$artist->instagram}}"><i class="fa fa-instagram" aria-hidden="true"></i></a>
@@ -268,7 +268,8 @@
 		<p><i class="fa fa-copyright" aria-hidden="true"></i> Seventh Day Studio 2016</p>
 	</footer>
 	
-	
+	<div id="token" >{{csrf_token()}}</div>
+	<div id="public" >{{url('/')}}</div>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.js"></script>

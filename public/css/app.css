@@ -459,6 +459,12 @@ footer {
     text-transform: uppercase;
     text-align: center; }
 
+#token {
+  display: none; }
+
+#public {
+  display: none; }
+
 body.admin section.login {
   background-color: #fff;
   margin: 20em auto;
@@ -779,7 +785,7 @@ body.admin-signup section.signup {
         -ms-flex: 0 0 50em;
         flex: 0 0 50em;
         margin-left: 1em;
-        font-size: 0.9em;
+        font-size: 0.5em;
         text-align: left; }
   section.gallery-frame .swiper-container {
     margin: 0 auto; }
