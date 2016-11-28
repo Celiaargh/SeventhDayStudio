@@ -51,6 +51,11 @@ class ArtistController extends Controller
         //
 
         $input = FormRequest::all();
+
+        $rules = [
+            'name'=>'required',
+            'description'=>'required',
+        ];
     }
 
     /**
@@ -62,6 +67,8 @@ class ArtistController extends Controller
     public function show($id)
     {
         //
+        $artist = Artist::find($id);
+        return view('adminfront');
     }
 
     /**
@@ -85,6 +92,26 @@ class ArtistController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $input = FormRequest::all();
+
+        $rules = [
+            'name'=>'required',
+            'description'=>'required',
+
+        ];
+
+        $validator = Validator::make($input,$rules);
+
+        if($validator->passes()==true){
+
+            $artist = Artist::find($id);
+
+            $artist->fill($input);
+
+            $artist->save();
+
+            return redirect('adminfront');
+        }
     }
 
     /**

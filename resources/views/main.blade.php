@@ -69,7 +69,7 @@
 					<h1>{!!App\Models\Content::find(3)->content!!}</h1>
 				</div>
 				<div class="tri-drop">
-					<div class="tri tattoo-img"></div>
+					<img src="assets/images/trifull.jpg" alt="" class="tattoo-img">
 					<div class="stripe"></div> 
 					<div class="social-media">
 						<a href="https://www.instagram.com/tritoan_seventhday/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
@@ -88,7 +88,7 @@
 						</div>
 						<div class="drop-down">
 							<div class="drop-down-content">
-								<div class="{{$artist->photo}} tattoo-img"></div>
+								<img src="{{url('assets/images/'.$artist->photo)}}" alt="" class="tattoo-img">
 								<div class="stripe"></div> 
 								<div class="social-media">
 									<a href="{{$artist->instagram}}"><i class="fa fa-instagram" aria-hidden="true"></i></a>

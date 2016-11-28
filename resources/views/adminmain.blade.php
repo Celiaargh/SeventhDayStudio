@@ -32,15 +32,14 @@
 	<main>
 		
 		<section class="admin-info">
-			<h1>Seventh Day Studio Admin Page</h1>
-			<p>To edit any section simply click on the text or click on the links</p>
+			<h1>Admin Panel</h1>
+			<p>To edit any section you must be logged in. Click on the text to edit or click the links provided</p>
 
 			<div class="admin-links">
 				<li><a href="{{url('/users/create')}}">New Admin</a></li>
 				<li><a href="">Edit Admin Details</a></li>
 				<li><a href="{{url('logout')}}">Logout</a></li>
 			</div>
-
 		</section>
 
 		<section class="welcome">
@@ -85,7 +84,7 @@
 					<h1>{!!App\Models\Content::find(3)->content!!}</h1>
 				</div>
 				<div class="tri-drop">
-					<div class="tri tattoo-img"></div>
+					<img src="assets/images/trifull.jpg" alt="" class="tattoo-img">
 					<div class="stripe"></div> 
 					<div class="social-media">
 						<a href="https://www.instagram.com/tritoan_seventhday/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
@@ -104,7 +103,7 @@
 						</div>
 						<div class="drop-down">
 							<div class="drop-down-content">
-								<div class="{{$artist->photo}} tattoo-img"></div>
+							<img src="{{url('assets/images/'.$artist->photo)}}" alt="" class="tattoo-img">
 								<div class="stripe"></div> 
 								<div class="social-media">
 									<a href="{{$artist->instagram}}"><i class="fa fa-instagram" aria-hidden="true"></i></a>
@@ -274,6 +273,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.js"></script>
+	<script src="http://www.appelsiini.net/download/jquery.jeditable.js"></script>
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCg6g9B1DEre7nVpANwgJpGXFo1urUeIm4&callback=initMap"
         async defer></script>
 	<script src="{{asset('Javascript/javascript.js')}}"></script>

@@ -128,6 +128,43 @@ nav{
 	}
 }
 
+//admin panel header
+
+section.admin-info{
+	// border:green solid 1px;
+	width:100%;
+
+	h1{
+		text-transform: uppercase;
+		text-align:center;
+	}
+
+	p{
+		text-align:center;
+		width: 25em;
+		margin-left: 2em;
+	}
+
+	.admin-links{
+	
+		display: flex;
+		margin-left: 3em;
+		li{
+			margin-right: 0.5em;
+			margin-left: 0.5em;
+			padding-right:0.5em;
+			border-right:1px #ccc solid;
+
+			a{
+				color: $LightPink;
+			}
+		}
+	}
+}
+
+//panel header end
+
+
 .welcome{
   width:100%;
   margin-top: 5em;
@@ -305,30 +342,6 @@ section.artists{
 					
 				}
 
-
-				.jasper{
-					background-image:url(../assets/images/jaspermobile.jpg);
-					background-repeat:no-repeat;
-				}
-
-				.hannah{
-					background-image:url(../assets/images/hannahmobile.jpg);
-					background-repeat:no-repeat;
-				}
-
-				.minnie{
-					background-image:url(../assets/images/minniemobile.jpg);
-					background-repeat:no-repeat;
-				}
-
-				.phoebe{
-					background-image:url(../assets/images/phoebemobile.jpg);
-					background-repeat:no-repeat;
-				}
-
-
-
-
 				.stripe{
 					margin-top: 0.6em;
 					height: 0.1em;
@@ -377,11 +390,6 @@ section.artists{
 				height: 8em;				
 				flex: 0 0 100%;
 				
-			}
-
-			.tri{
-				background-image:url(../assets/images/trimobile.jpg);
-				background-repeat:no-repeat;
 			}
 
 
@@ -798,6 +806,38 @@ body.admin-signup{
 
 @media only screen and (min-width: 40em){
 
+	//admin panel header
+
+	section.admin-info{
+	
+		
+
+		p{
+			text-align:center;
+			width: 25em;
+			margin: 0 auto;
+		}
+
+		.admin-links{
+			width: 22.5em;
+			display: flex;
+			margin:0 auto;
+
+			li{
+				margin-right: 0.5em;
+				margin-left: 0.5em;
+				padding-right:0.5em;
+				border-right:1px #ccc solid;
+
+				a{
+					color: $LightPink;
+				}
+			}
+		}
+	}
+
+
+
 	section.welcome{
 	
 		.welcometitle{
@@ -859,11 +899,6 @@ body.admin-signup{
 			.tri-drop{
 				width:32em;
 				margin-left: 3em;
-
-				.tri{
-					background-image:url(../assets/images/triportrait.jpg);
-					height: 13em;
-				}
 			}
 
 			.aname{
@@ -878,25 +913,6 @@ body.admin-signup{
 
 					.tattoo-img{
 						height:12em;
-					}
-					
-					.jasper{
-						background-image:url(../assets/images/jasportrait.jpg);
-					}
-
-					.hannah{
-
-						background-image:url(../assets/images/hannahportrait.jpg);										
-					}
-
-					.minnie{
-
-						background-image:url(../assets/images/minnieportrait.jpg);
-					}
-
-					.phoebe{
-
-						background-image:url(../assets/images/phoebeportrait.jpg);
 					}
 				}
 			}
@@ -1357,18 +1373,13 @@ body.admin-signup{
 				}
 			}
 
-			.tri-drop{
-
-				.tri{
-					background-image:url(../assets/images/trifull.jpg);
-				}
-			}
+	
 
 			.staff-about{
 				margin-left: 24%;
 				padding-left:5%;
 				width: 50%;
-				// border:red solid 1px;	
+					
 				
 				.staff-container{
 					
@@ -1376,7 +1387,7 @@ body.admin-signup{
 
 					.aname{
 						margin-left: 0;
-						// border:red solid 1px;
+						
 
 						h1{
 							font-size:1.5em;
@@ -1385,27 +1396,7 @@ body.admin-signup{
 					
 					.drop-down{
 						margin-left: 0;
-						// display: block !important;
-
-
-						.jasper{
-							background-image:url(../assets/images/jasfull.jpg);
-						}
-
-						.hannah{
-							background-image:url(../assets/images/hannahfull.jpg);
-
-						}
-
-						.minnie{
-							background-image:url(../assets/images/minniefull.jpg);
-
-						}
 						
-						.phoebe{
-							background-image:url(../assets/images/phoebefull.jpg);
-
-						}
 					}	
 				}				
 			}

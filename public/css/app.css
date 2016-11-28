@@ -92,6 +92,27 @@ nav {
     top: 0;
     right: 0; }
 
+section.admin-info {
+  width: 100%; }
+  section.admin-info h1 {
+    text-transform: uppercase;
+    text-align: center; }
+  section.admin-info p {
+    text-align: center;
+    width: 25em;
+    margin-left: 2em; }
+  section.admin-info .admin-links {
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: 3em; }
+    section.admin-info .admin-links li {
+      margin-right: 0.5em;
+      margin-left: 0.5em;
+      padding-right: 0.5em;
+      border-right: 1px #ccc solid; }
+      section.admin-info .admin-links li a {
+        color: #ff9999; }
+
 .welcome {
   width: 100%;
   margin-top: 5em;
@@ -220,18 +241,6 @@ section.artists {
         height: 8em;
         -ms-flex: 0 0 100%;
         flex: 0 0 100%; }
-      section.artists .portraitframe .drop-down .drop-down-content .jasper {
-        background-image: url(../assets/images/jaspermobile.jpg);
-        background-repeat: no-repeat; }
-      section.artists .portraitframe .drop-down .drop-down-content .hannah {
-        background-image: url(../assets/images/hannahmobile.jpg);
-        background-repeat: no-repeat; }
-      section.artists .portraitframe .drop-down .drop-down-content .minnie {
-        background-image: url(../assets/images/minniemobile.jpg);
-        background-repeat: no-repeat; }
-      section.artists .portraitframe .drop-down .drop-down-content .phoebe {
-        background-image: url(../assets/images/phoebemobile.jpg);
-        background-repeat: no-repeat; }
       section.artists .portraitframe .drop-down .drop-down-content .stripe {
         margin-top: 0.6em;
         height: 0.1em;
@@ -268,9 +277,6 @@ section.artists {
         height: 8em;
         -ms-flex: 0 0 100%;
         flex: 0 0 100%; }
-      section.artists .portraitframe .tri-drop .tri {
-        background-image: url(../assets/images/trimobile.jpg);
-        background-repeat: no-repeat; }
       section.artists .portraitframe .tri-drop .stripe {
         margin-top: 0.6em;
         height: 0.1em;
@@ -508,6 +514,22 @@ body.admin-signup section.signup {
       color: #fff; }
 
 @media only screen and (min-width: 40em) {
+  section.admin-info p {
+    text-align: center;
+    width: 25em;
+    margin: 0 auto; }
+  section.admin-info .admin-links {
+    width: 22.5em;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0 auto; }
+    section.admin-info .admin-links li {
+      margin-right: 0.5em;
+      margin-left: 0.5em;
+      padding-right: 0.5em;
+      border-right: 1px #ccc solid; }
+      section.admin-info .admin-links li a {
+        color: #ff9999; }
   section.welcome .welcometitle {
     text-align: center;
     margin-left: 6em;
@@ -539,9 +561,6 @@ body.admin-signup section.signup {
   section.artists .portraitframe .tri-drop {
     width: 32em;
     margin-left: 3em; }
-    section.artists .portraitframe .tri-drop .tri {
-      background-image: url(../assets/images/triportrait.jpg);
-      height: 13em; }
   section.artists .portraitframe .aname {
     margin-left: 1em; }
   section.artists .portraitframe .drop-down {
@@ -549,14 +568,6 @@ body.admin-signup section.signup {
     margin-left: 3em; }
     section.artists .portraitframe .drop-down .drop-down-content .tattoo-img {
       height: 12em; }
-    section.artists .portraitframe .drop-down .drop-down-content .jasper {
-      background-image: url(../assets/images/jasportrait.jpg); }
-    section.artists .portraitframe .drop-down .drop-down-content .hannah {
-      background-image: url(../assets/images/hannahportrait.jpg); }
-    section.artists .portraitframe .drop-down .drop-down-content .minnie {
-      background-image: url(../assets/images/minnieportrait.jpg); }
-    section.artists .portraitframe .drop-down .drop-down-content .phoebe {
-      background-image: url(../assets/images/phoebeportrait.jpg); }
   section.gallery-frame .gallery-info h1 {
     font-size: 2.5em; }
   section.gallery-frame .gallery-info p {
@@ -804,8 +815,6 @@ body.admin-signup section.signup {
     padding-left: 20%; }
     section.artists .portraitframe .triblock h1 {
       font-size: 1.5em; }
-  section.artists .portraitframe .tri-drop .tri {
-    background-image: url(../assets/images/trifull.jpg); }
   section.artists .portraitframe .staff-about {
     margin-left: 24%;
     padding-left: 5%;
@@ -819,14 +828,6 @@ body.admin-signup section.signup {
           font-size: 1.5em; }
       section.artists .portraitframe .staff-about .staff-container .drop-down {
         margin-left: 0; }
-        section.artists .portraitframe .staff-about .staff-container .drop-down .jasper {
-          background-image: url(../assets/images/jasfull.jpg); }
-        section.artists .portraitframe .staff-about .staff-container .drop-down .hannah {
-          background-image: url(../assets/images/hannahfull.jpg); }
-        section.artists .portraitframe .staff-about .staff-container .drop-down .minnie {
-          background-image: url(../assets/images/minniefull.jpg); }
-        section.artists .portraitframe .staff-about .staff-container .drop-down .phoebe {
-          background-image: url(../assets/images/phoebefull.jpg); }
   section.gallery-frame .swiper-container .swiper-wrapper .swiper-slide img {
     height: 25em; }
   body.admin section.login .login-header {
