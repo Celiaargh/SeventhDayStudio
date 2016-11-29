@@ -17,7 +17,7 @@
 			<p>New Frequently Asked Question</p>
 		</div>
 
-		{!! Form::open (['url'=>'faqs','class'=>'admin-signup']) !!}
+		{!! Form::open (['url'=>'faq','class'=>'admin-signup']) !!}
 
 			<div class="form-group" id="signup-group">
 

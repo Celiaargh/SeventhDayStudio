@@ -104,28 +104,41 @@ class FaqsController extends Controller
     public function update(Request $request, $id)
     {
         //
-        $input = FormRequest::all();
+        // $input = FormRequest::all();
 
-        $rules = [
+        // $rules = [
 
-            'question'=>'required',
-            'answer'=>'required',
-        ];
+        //     'question'=>'required',
+        //     'answer'=>'required',
+        // ];
 
-        $validator = Validator::make($input,$rules);
+        // $validator = Validator::make($input,$rules);
 
-        if($validator->passes()==true){
+        // if($validator->passes()==true){
 
-            $faq = Faq::find($id);
+        //     $faq = Faq::find($id);
 
-            $faq->fill($input);
+        //     $faq->fill($input);
 
-            $faq->save();
+        //     $faq->save();
 
-           return redirect('adminfront');
-        }else{
-            return redirect('newfaq')->withInput()->withErrors($validator);
-        }
+        //    return redirect('adminfront');
+        // }else{
+        //     return redirect('newfaq')->withInput()->withErrors($validator);
+        // }
+
+        $input = \Request::all();
+        $column = $input['column'];
+        $value = $input['value']; //new data user enters 
+
+        $faq = Faq::find($id);
+        $faq->$column = $value;
+        $faq->save();
+
+        return $value; //used to update the div
+
+
+
     }
 
     /**
@@ -137,9 +150,9 @@ class FaqsController extends Controller
     public function destroy($id)
     {
         //
-        $faq = Faq::find($id);
-        $faq->delete();
-        return redirect('adminfront');
+        // $faq = Faq::find($id);
+        // $faq->delete();
+        // return redirect('adminfront');
 
     }
 }

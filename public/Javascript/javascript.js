@@ -102,6 +102,42 @@ $(function(){
 	});
 
 
+	//------------------------edit in place
+
+		// [] selects all divs with "data-editable"
+			//i is for index and el is the element in the index
+	 $('[data-editable]').each(function(i,el){
+
+	 		var url = $(el).data('url');
+
+	 		var options = {
+	 			type:"textarea", //makes edit box a text area and not a input
+	 			submit:"OK", //creates submit button with OK value
+	 			cssclass:"editable",
+	 			submitdata:{ 
+	 				_method:'PUT', //put request to update info
+	 				_token:$('#token').text(),  //selects security token without it server wont accept your form
+	 				column:$(el).data('editable'), //tells the server what column to update
+	 			} 
+	 		};
+
+	 		$(el).editable(url,options);
+	 });
+
+	 //------------------------WYSIWYG
+
+	
+	$(document).on('DOMNodeInserted', function(e){
+
+		if($(e.target).hasClass('editable')){
+
+			tinymce.init({  //initilise the plugin telling it which input 
+				selector:'.editable textarea'
+			}); 
+		}
+	});
+
+
 });
 
 

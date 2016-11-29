@@ -110,15 +110,33 @@ class UserController extends Controller
     public function update(Request $request, $id)
     {
         //
-        // $input = FormRequest::all();
+        $input = FormRequest::all();
 
-        // if(FormRequest::ajax()==false{
+        if(FormRequest::ajax()==false){
 
-        //     $rules = [
-        //         ''=>'required'
+            $rules = [
+                'username'=>'required',
+                'firstname'=>'required',
+                'lastname'=>'required',
 
-        //     ]
-        // })
+            ];
+
+            $validator = Validator::make($input,$rules);
+
+            if($validator = passes() == true){
+
+                $user = User::find($id);
+
+                $user->fill($input);
+
+                $user->save();
+
+                return redirect('details/'.$id);
+            }else{
+
+                return redirect('details/'.$id);
+            }
+        }
     }
 
     /**

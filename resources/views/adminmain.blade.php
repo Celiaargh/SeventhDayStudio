@@ -37,7 +37,7 @@
 
 			<div class="admin-links">
 				<li><a href="{{url('/users/create')}}">New Admin</a></li>
-				<li><a href="{{url('')}}">Admin Details</a></li>
+				<li><a href="{{url('users/details')}}">Admin Details</a></li>
 				<li><a href="{{url('logout')}}">Logout</a></li>
 			</div>
 		</section>
@@ -51,13 +51,13 @@
 			</div>
 		
 			<div class="welcome-container">
-				<div class="welcometitle">
+				<div class="welcometitle" data-editable="content" data-url="{!!url('contents/1')!!}">
 					
 					{!!App\Models\Content::find(1)->content!!}
 				</div>
 
 			
-				<div class="welcomeabout">
+				<div class="welcomeabout" data-editable="content" data-url="{!!url('contents/2')!!}">
 					{!!App\Models\Content::find(2)->content!!}
 
 				</div>
@@ -80,8 +80,8 @@
 
 			<div class="portraitframe">
 
-				<div class="triblock">
-					<h1>{!!App\Models\Content::find(3)->content!!}</h1>
+				<div class="triblock" data-editable="content" data-url="{!!url('contents/3')!!}">
+					{!!App\Models\Content::find(3)->content!!}
 				</div>
 				<div class="tri-drop">
 					<img src="assets/images/trifull.jpg" alt="" class="tattoo-img">
@@ -90,7 +90,9 @@
 						<a href="https://www.instagram.com/tritoan_seventhday/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
 						<a href="https://www.facebook.com/tritoanlyink/"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
 					</div>
-					{!!App\Models\Content::find(4)->content!!}
+					<div class="" data-editable="content" data-url="{!!url('contents/4')!!}" >
+						{!!App\Models\Content::find(4)->content!!}
+					</div>
 				
 				</div>
 				
@@ -109,8 +111,9 @@
 									<a href="{{$artist->instagram}}"><i class="fa fa-instagram" aria-hidden="true"></i></a>
 									<a href="https://www.facebook.com/tritoanlyink/"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
 								</div>
-								
-								{{$artist->description}}
+								<div data-editable="description" data-url="{{url('artists/'.$artist->id)}}">
+									{{$artist->description}}
+								</div>
 								
 							</div>
 						</div>
@@ -159,10 +162,17 @@
 
 				if($index<4){
 					$firstFour .= '<div class="Question">
-							<h3>'.$faq->question.'</h3>
-							<p>
-								'.$faq->answer.'
-							</p>
+							<div data-editable="question" data-url="'.url('faq/'.$faq->id).'">
+								<h3>'.$faq->question.'</h3>
+							</div>
+
+							<div data-editable="answer" data-url="'.url('faq/'.$faq->id).'">
+								<p>
+									'.$faq->answer.'
+								</p>
+							</div>
+							
+							
 						
 							
 						</div>';
@@ -170,11 +180,15 @@
 				}else{
 
 					$theRest .= '<div class="Question">
-							<h3>'.$faq->question.'</h3>
-							<p>
-								'.$faq->answer.'
-							</p>
-							
+							<div data-editable="question" data-url="'.url('faq/'.$faq->id).'">
+								<h3>'.$faq->question.'</h3>
+							</div>
+
+							<div data-editable="answer" data-url="'.url('faq/'.$faq->id).'">
+								<p>
+									'.$faq->answer.'
+								</p>
+							</div>
 						</div>';
 
 				}
@@ -202,17 +216,17 @@
 
 			<div class="contact-info">
 
-		 		<div class="address">
+		 		<div class="address" data-editable="content" data-url="{!!url('contents/5')!!}">
 		 			{!!App\Models\Content::find(5)->content!!}
 		
 		 		</div>
 
-		 		<div class="opening-times">
+		 		<div class="opening-times" data-editable="content" data-url="{!!url('contents/6')!!}">
 		 			{!!App\Models\Content::find(6)->content!!}
 		 		
 		 		</div>
 
-				<div class="phone">
+				<div class="phone" data-editable="content" data-url="{!!url('contents/7')!!}">
 					{!!App\Models\Content::find(7)->content!!}
 				
 				</div>
@@ -277,6 +291,7 @@
 	<script src="http://www.appelsiini.net/download/jquery.jeditable.js"></script>
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCg6g9B1DEre7nVpANwgJpGXFo1urUeIm4&callback=initMap"
         async defer></script>
+    <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
 	<script src="{{asset('Javascript/javascript.js')}}"></script>
 </body>
 </html>

@@ -19,23 +19,42 @@ Route::get('front', function(){
 	return view('main');
 });
 
+
+
+Route::put('contents/{id}', function($id){
+
+	$input = Request::all();
+	$column = $input['column'];
+    $value = $input['value']; //new data user enters 
+
+    $user = App\Models\Content::find($id);
+    $user->$column = $value;
+    $user->save();
+
+    return $value; //used to update the div
+});
+
+
+
 Route::get('adminfront', function(){
 
 	$artist = App\Models\Artist::all();
 	$faq = App\Models\Faq::all();
 
 	return view('adminmain',['artists'=>$artist],['faqs'=>$faq]);
-});
+})->middleware('auth');
 
 Route::get('newfaq',function(){
+
 	return view('newfaq');
-});
+})->middleware('auth');
 
-Route::get('details',function(){
+
+Route::get('users/details',function(){
 	return view('admindetails');
-});
+})->middleware('auth');
 
-
+//admin end
 
 Route::get('test', function(){
 	// $images = App\Models\Image::where('imageable_type','gallery')->get();
@@ -58,6 +77,7 @@ Route::get('front',function(){
 
 Route::resource('users','UserController');
 Route::resource('faq','FaqsController');
+Route::resource('artist','ArtistController');
 
 
 Route::get('login','LoginController@showLoginForm');
