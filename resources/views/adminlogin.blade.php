@@ -28,7 +28,7 @@
 
 			<div class="form-group" id="login-group">
 				
-				{!! Form::text('password',null,['placeholder'=>' Password'],['class'=>'form-control'],['id'=>'password']) !!}
+				{!! Form::password('password',['placeholder'=>' Password'],['class'=>'form-control'],['id'=>'password']) !!}
 			</div>
 
 			<div class="form-group" id="login-group">

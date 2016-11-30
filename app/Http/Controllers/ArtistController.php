@@ -9,7 +9,7 @@ use App\Http\Requests;
 use Request as FormRequest;
 
 use Validator;
-use App\Models\Artists;
+use App\Models\Artist;
 
 class ArtistController extends Controller
 {
@@ -53,7 +53,6 @@ class ArtistController extends Controller
         $input = FormRequest::all();
 
         $rules = [
-            'name'=>'required',
             'description'=>'required',
         ];
     }
@@ -92,26 +91,36 @@ class ArtistController extends Controller
     public function update(Request $request, $id)
     {
         //
-        $input = FormRequest::all();
+        // $input = FormRequest::all();
 
-        $rules = [
-            'name'=>'required',
-            'description'=>'required',
+        // $rules = [
+        //     'name'=>'required',
+        //     'description'=>'required',
 
-        ];
+        // ];
 
-        $validator = Validator::make($input,$rules);
+        // $validator = Validator::make($input,$rules);
 
-        if($validator->passes()==true){
+        // if($validator->passes()==true){
 
-            $artist = Artist::find($id);
+        //     $artist = Artist::find($id);
 
-            $artist->fill($input);
+        //     $artist->fill($input);
 
-            $artist->save();
+        //     $artist->save();
 
-            return redirect('adminfront');
-        }
+        //     return redirect('adminfront');
+        // }
+
+        $input = \Request::all();
+        $column = $input['column'];
+        $value = $input['value']; //new data user enters 
+
+        $artist = Artist::find($id);
+        $artist->$column = $value;
+        $artist->save();
+
+        return $value; //used to update the div
     }
 
     /**

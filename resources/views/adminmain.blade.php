@@ -51,7 +51,7 @@
 			</div>
 		
 			<div class="welcome-container">
-				<div class="welcometitle" data-editable="content" data-url="{!!url('contents/1')!!}">
+				<div class="welcometitle">
 					
 					{!!App\Models\Content::find(1)->content!!}
 				</div>
@@ -111,8 +111,8 @@
 									<a href="{{$artist->instagram}}"><i class="fa fa-instagram" aria-hidden="true"></i></a>
 									<a href="https://www.facebook.com/tritoanlyink/"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
 								</div>
-								<div data-editable="description" data-url="{{url('artists/'.$artist->id)}}">
-									{{$artist->description}}
+								<div data-editable="description" data-url="{!!url('artist/'.$artist->id)!!}">
+									{!!$artist->description!!}
 								</div>
 								
 							</div>
@@ -135,7 +135,7 @@
 			<div class="swiper-container">
         		<div class="swiper-wrapper">
         		@foreach(App\Models\Image::where('imageable_type','gallery')->get() as $image)
-	            	<div class="swiper-slide"><img src="{{url('assets/images/'.$image->url)}}" alt=""></div>
+	            	<div class="swiper-slide"><img src="{!!url('assets/images/'.$image->url)!!}" alt=""></div>
 	            @endforeach
 	            
         	</div>

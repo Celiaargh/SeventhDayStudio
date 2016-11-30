@@ -261,8 +261,8 @@ section.artists {
         flex: 0 0 5%; }
       section.artists .portraitframe .drop-down .drop-down-content p {
         font-family: 'Open Sans', sans-serif;
-        font-size: 0.8em;
         text-align: left;
+        font-size: 0.9em;
         -ms-flex: 0 0 90%;
         flex: 0 0 90%; }
     section.artists .portraitframe .tri-drop {
@@ -297,7 +297,6 @@ section.artists {
         flex: 0 0 5%; }
       section.artists .portraitframe .tri-drop p {
         font-family: 'Open Sans', sans-serif;
-        font-size: 0.8em;
         text-align: left;
         -ms-flex: 0 0 90%;
         flex: 0 0 90%; }
@@ -413,21 +412,15 @@ section.contact {
       margin-left: 1em; }
       section.contact .contact-info .address p {
         text-align: left; }
-        section.contact .contact-info .address p i {
-          color: #ff9999; }
     section.contact .contact-info .opening-times {
       width: 10em; }
       section.contact .contact-info .opening-times p {
         text-align: left; }
-        section.contact .contact-info .opening-times p i {
-          color: #ff9999; }
     section.contact .contact-info .phone {
       width: 8em;
       margin-left: 1em; }
       section.contact .contact-info .phone p {
         text-align: left; }
-        section.contact .contact-info .phone p i {
-          color: #ff9999; }
   section.contact form .form-group label {
     display: block;
     color: #ff9999;
@@ -733,7 +726,6 @@ body.admin-signup section.signup {
       -ms-flex: 0 0 50em;
       flex: 0 0 50em;
       margin-left: 1em;
-      font-size: 0.9em;
       text-align: left; }
   section.artists .portraitframe .staff-about {
     margin-top: 3em;
@@ -788,7 +780,7 @@ body.admin-signup section.signup {
         -ms-flex: 0 0 50em;
         flex: 0 0 50em;
         margin-left: 1em;
-        font-size: 0.5em;
+        font-size: 1em;
         text-align: left; }
   section.gallery-frame .swiper-container {
     margin: 0 auto; }

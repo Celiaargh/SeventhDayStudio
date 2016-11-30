@@ -95,7 +95,7 @@
 									<a href="https://www.facebook.com/tritoanlyink/"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
 								</div>
 								
-								{{$artist->description}}
+								{!!$artist->description!!}
 								
 							</div>
 						</div>

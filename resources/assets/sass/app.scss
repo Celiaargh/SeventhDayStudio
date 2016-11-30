@@ -327,14 +327,13 @@ section.artists{
 
 		.drop-down{
 			
-			
 
 			.drop-down-content{
 
 				display: flex;
 				flex-wrap:wrap;
 				justify-content: space-around;
-				margin-bottom:1em;;
+				margin-bottom:1em;
 				
 				.tattoo-img{
 					margin-top: 0.5em;
@@ -372,8 +371,8 @@ section.artists{
 				p{
 
 					font-family:'Open Sans', sans-serif;
-					font-size: 0.8em;
 					text-align: left;
+					font-size:0.9em;
 					flex:0 0 90%;
 				}
 			}
@@ -423,7 +422,6 @@ section.artists{
 			p{
 
 			font-family:'Open Sans', sans-serif;
-			font-size: 0.8em;
 			text-align: left;
 			flex:0 0 90%;
 
@@ -612,9 +610,6 @@ section.contact{
 			// border:red solid 1px;
 			p{
 				text-align: left;
-				i{
-					color: $LightPink;
-				}
 			}
 		}
 
@@ -623,9 +618,7 @@ section.contact{
 			// border:red solid 1px;
 			p{
 				text-align: left;
-				i{
-					color: $LightPink;
-				}
+				
 			}
 		}
 
@@ -635,9 +628,6 @@ section.contact{
 			// border:red solid 1px;
 			p{
 				text-align: left;
-				i{
-					color: $LightPink;
-				}
 			}
 		}
 	}
@@ -1198,7 +1188,6 @@ body.admin-signup{
 					// border:solid 1px red;
 					flex:0 0 50em;
 					margin-left:1em;
-					font-size: 0.9em;
 					text-align:left;
 				}
 
@@ -1271,7 +1260,7 @@ body.admin-signup{
 						// border:solid 1px red;
 						flex:0 0 50em;
 						margin-left:1em;
-						font-size: 0.5em;
+						font-size: 1em;
 						text-align:left;
 					}
 
