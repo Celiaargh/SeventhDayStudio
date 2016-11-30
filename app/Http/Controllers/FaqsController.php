@@ -103,29 +103,7 @@ class FaqsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
-        // $input = FormRequest::all();
 
-        // $rules = [
-
-        //     'question'=>'required',
-        //     'answer'=>'required',
-        // ];
-
-        // $validator = Validator::make($input,$rules);
-
-        // if($validator->passes()==true){
-
-        //     $faq = Faq::find($id);
-
-        //     $faq->fill($input);
-
-        //     $faq->save();
-
-        //    return redirect('adminfront');
-        // }else{
-        //     return redirect('newfaq')->withInput()->withErrors($validator);
-        // }
 
         $input = \Request::all();
         $column = $input['column'];
@@ -150,9 +128,7 @@ class FaqsController extends Controller
     public function destroy($id)
     {
         //
-        // $faq = Faq::find($id);
-        // $faq->delete();
-        // return redirect('adminfront');
+        
 
     }
 }

@@ -11,11 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
-Route::get('front', function(){
+Route::get('/', function(){
 	return view('main');
 });
 
@@ -34,6 +31,13 @@ Route::put('contents/{id}', function($id){
     return $value; //used to update the div
 });
 
+Route::get('users/{id}',function ($id) {
+
+	$user = App\Models\User::find($id);
+
+    return view('admindetails',['user'=>$user]); 
+})->middleware(['auth']);
+
 
 
 Route::get('adminfront', function(){
@@ -49,10 +53,12 @@ Route::get('newfaq',function(){
 	return view('newfaq');
 })->middleware('auth');
 
+Route::get('newartist',function(){
 
-Route::get('users/details',function(){
-	return view('admindetails');
+	return view('newartist');
 })->middleware('auth');
+
+
 
 //admin end
 
@@ -67,7 +73,7 @@ Route::get('test', function(){
 });
 
 
-Route::get('front',function(){
+Route::get('/',function(){
 
 	$artist = App\Models\Artist::all();
 	$faq = App\Models\Faq::all();

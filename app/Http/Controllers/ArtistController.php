@@ -53,8 +53,30 @@ class ArtistController extends Controller
         $input = FormRequest::all();
 
         $rules = [
+            'name'=>'required',
             'description'=>'required',
         ];
+
+        $validator = Validator::make($input,$rules);
+
+         if($validator->passes() == true){
+        
+            $artist = Artist::create($input);
+
+
+            $newName = 'artist_'.$artist->id.'.jpg';
+
+            \Request::file('artist_photo')->move('images',$newName);
+
+            $artist->artist_photo = $newName;
+            $artist->save();
+
+
+            return redirect('adminfront');
+        }else{
+            return redirect('newartist')->withInput()->withErrors($validator);
+        };
+
     }
 
     /**
@@ -90,27 +112,6 @@ class ArtistController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
-        // $input = FormRequest::all();
-
-        // $rules = [
-        //     'name'=>'required',
-        //     'description'=>'required',
-
-        // ];
-
-        // $validator = Validator::make($input,$rules);
-
-        // if($validator->passes()==true){
-
-        //     $artist = Artist::find($id);
-
-        //     $artist->fill($input);
-
-        //     $artist->save();
-
-        //     return redirect('adminfront');
-        // }
 
         $input = \Request::all();
         $column = $input['column'];
@@ -132,5 +133,9 @@ class ArtistController extends Controller
     public function destroy($id)
     {
         //
+        $artist = Artist::find($id);
+        $artist->delete();
+        return redirect('adminfront');
+
     }
 }

@@ -72,7 +72,7 @@
 					our talented and harding working artists who you'll surely love.
 				</p>
 				<div class="Edit-Artists">
-					<a href="">Add an Artist</a>
+					<a href="{{url('newartist')}}">Add an Artist</a>
 				</div>
 			</div>
 				
@@ -117,6 +117,15 @@
 								
 							</div>
 						</div>
+
+						{!! Form::open (['url'=>'artist/'.$artist->id,'class'=>'admin-signup','method'=>'delete']) !!}
+
+							
+							<div class="form-group" id="signup-group">
+								<input type="submit" value="Delete Artist" class="form-control" id="submit">
+							</div>
+						{!! Form::close() !!}
+	
 					</div>
 				@endforeach
 				

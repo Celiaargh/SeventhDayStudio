@@ -20,20 +20,22 @@
 		<div class="detail-container">
 
 			<div class="details">
-				<h3>Username:</h3>
-				<div data-url="{!! url('users/'.$user->id) !!}"></div>
+				<h3>Username: {{$user->username}}</h3>
+				
 
 			</div>
 
 			<div class="details">
-				<h3>First Name:</h3>
-				<div data-url="{!! url('users/'.$user->id) !!}"></div>
+				<h3>First Name: {{$user->username}}</h3>
+				
+				
 
 			</div>
 
 			<div class="details">
-				<h3>Last Name:</h3>
-				<div data-url="{!! url('users/'.$user->id) !!}"></div>
+				<h3>Last Name: {{$user->username}}</h3>
+				
+				
 
 			</div>	
 		</div>
