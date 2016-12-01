@@ -31,12 +31,12 @@ Route::put('contents/{id}', function($id){
     return $value; //used to update the div
 });
 
-Route::get('users/{id}',function ($id) {
+// Route::get('users/{id}',function ($id) {
 
-	$user = App\Models\User::find($id);
+// 	$user = App\Models\User::find($id);
 
-    return view('admindetails',['user'=>$user]); 
-})->middleware(['auth']);
+//     return view('admindetails',['user'=>$user]); 
+// })->middleware(['auth']);
 
 
 
@@ -57,7 +57,6 @@ Route::get('newartist',function(){
 
 	return view('newartist');
 })->middleware('auth');
-
 
 
 //admin end

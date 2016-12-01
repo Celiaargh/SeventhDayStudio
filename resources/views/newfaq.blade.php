@@ -22,10 +22,12 @@
 			<div class="form-group" id="signup-group">
 
 					{!! Form::text('question',null,['placeholder'=>'Question'],['class'=>'Form-Control']) !!}
+					
 			</div>
 
 			<div class="form-group" id="signup-group">
 					{!! Form::textarea('answer',null,['placeholder'=>'Answer'],['class'=>'Form-Control'])!!}
+					
 			</div>
 
 			<div class="form-group" id="signup-group">

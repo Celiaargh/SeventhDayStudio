@@ -21,20 +21,24 @@
 
 			<div class="form-group" id="signup-group">
 					{!! Form::text('username',null,['placeholder'=>' Username'],['class'=>'form-control'],['id'=>'username']) !!}
+					<p class="error">{{ $errors->first('username')}}</p>
 			</div>
 
 			<div class="form-group" id="signup-group">
 					{!! Form::text('first_name',null,['placeholder'=>' First Name'],['class'=>'form-control'],['id'=>'firstname']) !!}
+					<p class="error">{{ $errors->first('first_name')}}</p>
 			</div>
 
 			<div class="form-group" id="signup-group">
 
 					{!! Form::text('last_name',null,['placeholder'=>' Last Name'],['class'=>'form-control'],['id'=>'lastname']) !!}
+					<p class="error">{{ $errors->first('last_name')}}</p>
 			</div>
 
 			<div class="form-group" id="signup-group">
 
-				{!! Form::text('password',null,['placeholder'=>' Password'],['class'=>'form-control'],['id'=>'password']) !!}
+				{!! Form::password('password',['placeholder'=>' Password'],['class'=>'form-control'],['id'=>'password']) !!}
+				<p class="error">{{ $errors->first('password')}}</p>
 			</div>
 
 			<div class="form-group" id="signup-group">

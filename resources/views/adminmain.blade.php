@@ -36,8 +36,8 @@
 			<p>To edit any section you must be logged in. Click on the text to edit or click the links provided</p>
 
 			<div class="admin-links">
-				<li><a href="{{url('/users/create')}}">New Admin</a></li>
-				<li><a href="{{url('users/details')}}">Admin Details</a></li>
+				<li><a href="{{url('users/create')}}">New Admin</a></li>
+				<li><a href="{{url('users/'.Auth::user()->id)}}">Admin Details</a></li>
 				<li><a href="{{url('logout')}}">Logout</a></li>
 			</div>
 		</section>

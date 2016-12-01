@@ -24,6 +24,8 @@
 			<div class="form-group" id="login-group">
 
 				{!! Form::text('username',null,['placeholder'=>' Username'],['class'=>'form-control'],['id'=>'username']) !!}
+				
+
 			</div>
 
 			<div class="form-group" id="login-group">

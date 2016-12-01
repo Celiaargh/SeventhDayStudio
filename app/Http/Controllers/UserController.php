@@ -97,7 +97,7 @@ class UserController extends Controller
     {
         //
 
-        $user = User('editdetails',['user'=>$user]);
+        // $user = User('editdetails',['user'=>$user]);
     }
 
     /**
@@ -110,33 +110,33 @@ class UserController extends Controller
     public function update(Request $request, $id)
     {
         //
-        $input = FormRequest::all();
+        // $input = FormRequest::all();
 
-        if(FormRequest::ajax()==false){
+        // if(FormRequest::ajax()==false){
 
-            $rules = [
-                'username'=>'required',
-                'firstname'=>'required',
-                'lastname'=>'required',
+        //     $rules = [
+        //         'username'=>'required',
+        //         'firstname'=>'required',
+        //         'lastname'=>'required',
 
-            ];
+        //     ];
 
-            $validator = Validator::make($input,$rules);
+        //     $validator = Validator::make($input,$rules);
 
-            if($validator = passes() == true){
+        //     if($validator = passes() == true){
 
-                $user = User::find($id);
+        //         $user = User::find($id);
 
-                $user->fill($input);
+        //         $user->fill($input);
 
-                $user->save();
+        //         $user->save();
 
-                return redirect('details/'.$id);
-            }else{
+        //         return redirect('details/'.$id);
+        //     }else{
 
-                return redirect('details/'.$id);
-            }
-        }
+        //         return redirect('details/'.$id);
+        //     }
+        // }
     }
 
     /**

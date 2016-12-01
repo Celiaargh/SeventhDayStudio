@@ -605,7 +605,10 @@ body.admin-signup section.signup {
     section.contact form .form-group input#submit {
       width: 43em; }
   body.admin section.login .login-header {
-    margin-left: 20%; } }
+    margin-left: 20%; }
+  body.admin-signup #signup-group {
+    margin: 0 auto 1em;
+    width: 25em; } }
 
 @media only screen and (min-width: 60em) {
   nav .fold {

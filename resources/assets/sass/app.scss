@@ -13,7 +13,6 @@ ul,li{
 
 body{
 	font-family: 'Open Sans', sans-serif;
-
 }
 
 header:before{
@@ -1005,6 +1004,14 @@ body.admin-signup{
 			.login-header{
 				margin-left: 20%;
 			}
+		}
+	}
+
+	body.admin-signup{
+
+		#signup-group{
+			margin:0 auto 1em;;
+			width: 25em;
 		}
 	}
 }
