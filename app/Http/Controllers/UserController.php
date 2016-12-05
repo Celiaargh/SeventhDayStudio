@@ -96,8 +96,8 @@ class UserController extends Controller
     public function edit($id)
     {
         //
-
-        // $user = User('editdetails',['user'=>$user]);
+        $user = User::find($id);
+        return view('editdetails',['user'=>$user]);
     }
 
     /**
@@ -110,33 +110,32 @@ class UserController extends Controller
     public function update(Request $request, $id)
     {
         //
-        // $input = FormRequest::all();
+        $user = User::find($id);
+        $input = FormRequest::all();
 
-        // if(FormRequest::ajax()==false){
+        $rules = [
+            'username'=>'required',
+            'first_name'=>'required',
+            'last_name'=>'required',
 
-        //     $rules = [
-        //         'username'=>'required',
-        //         'firstname'=>'required',
-        //         'lastname'=>'required',
+        ];
 
-        //     ];
+        $validator = Validator::make($input,$rules);
 
-        //     $validator = Validator::make($input,$rules);
+        if($validator->passes() == true){
 
-        //     if($validator = passes() == true){
+            
 
-        //         $user = User::find($id);
+            $user->fill($input);
 
-        //         $user->fill($input);
+            $user->save();
 
-        //         $user->save();
+            return redirect('users/'.$user->id);
+        }else{
 
-        //         return redirect('details/'.$id);
-        //     }else{
-
-        //         return redirect('details/'.$id);
-        //     }
-        // }
+            return redirect('users/'.$user->id.'/edit')->withInput()->withErrors($validator);
+        }
+        
     }
 
     /**

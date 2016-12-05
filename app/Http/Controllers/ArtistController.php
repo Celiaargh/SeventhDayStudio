@@ -66,9 +66,9 @@ class ArtistController extends Controller
 
             $newName = 'artist_'.$artist->id.'.jpg';
 
-            \Request::file('artist_photo')->move('images',$newName);
+            \Request::file('artist_photo')->move('assets/images',$newName);
 
-            $artist->artist_photo = $newName;
+            $artist->photo = $newName;
             $artist->save();
 
 

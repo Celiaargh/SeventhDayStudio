@@ -17,19 +17,22 @@
 			<p>Edit Details</p>
 		</div>
 
-		{!! Form::open (['url'=>'users','class'=>'admin-signup']) !!}
+		{!! Form::open (['url'=>'users/'.$user->id,'method'=>'put','class'=>'admin-signup']) !!}
 
 			<div class="form-group" id="signup-group">
-					{!! Form::text('username',null,['placeholder'=>' Username'],['class'=>'form-control'],['id'=>'username']) !!}
+					{!! Form::text('username',$user->username,['placeholder'=>' Username','class'=>'form-control','id'=>'username']) !!}
+					<p class="error">{{ $errors->first('username')}}</p>
 			</div>
 
 			<div class="form-group" id="signup-group">
 					{!! Form::text('first_name',null,['placeholder'=>' First Name'],['class'=>'form-control'],['id'=>'firstname']) !!}
+					<p class="error">{{ $errors->first('firstname')}}</p>
 			</div>
 
 			<div class="form-group" id="signup-group">
 
 					{!! Form::text('last_name',null,['placeholder'=>' Last Name'],['class'=>'form-control'],['id'=>'lastname']) !!}
+					<p class="error">{{ $errors->first('lastname')}}</p>
 			</div>
 
 

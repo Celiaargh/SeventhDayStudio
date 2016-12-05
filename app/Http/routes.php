@@ -31,12 +31,7 @@ Route::put('contents/{id}', function($id){
     return $value; //used to update the div
 });
 
-// Route::get('users/{id}',function ($id) {
 
-// 	$user = App\Models\User::find($id);
-
-//     return view('admindetails',['user'=>$user]); 
-// })->middleware(['auth']);
 
 
 
@@ -58,6 +53,11 @@ Route::get('newartist',function(){
 	return view('newartist');
 })->middleware('auth');
 
+Route::get('users/{id}/edit',function($id){
+
+	$user = App\Models\User::find($id);
+	return view('editdetails',compact('user'));
+})->middleware('auth');
 
 //admin end
 
@@ -94,7 +94,7 @@ Route::get('logout','LoginController@logout');
 
 //-------Contact us email
 
-Route::post('front',function(){
+Route::post('/',function(){
 
 	$data = Request::all();
 
