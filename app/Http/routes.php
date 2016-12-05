@@ -101,6 +101,6 @@ Route::post('/',function(){
 	Mail::send('emailtemplate',$data,function($message) use ($data) {
 
 		$message->from($data['email'],$data['firstname']);
-		$message->to('TestSeventh@gmail.com')->subject('Hello');;
+		$message->to('testseventh@gmail.com')->subject('Hello');;
 	});
 });

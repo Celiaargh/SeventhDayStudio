@@ -514,6 +514,18 @@ body.admin-signup section.signup {
       background-color: #ffcccc;
       border: transparent;
       color: #fff; }
+  body.admin-signup section.signup .detail-container h3 {
+    font-size: 1.5em;
+    color: #ff9999; }
+  body.admin-signup section.signup .detail-container a {
+    text-transform: uppercase;
+    margin: 0 auto;
+    padding: 0.5em 0.5em;
+    background-color: #ccc;
+    color: #fff;
+    text-decoration: none; }
+  body.admin-signup section.signup .detail-container a:hover {
+    background-color: #ffcccc; }
 
 @media only screen and (min-width: 40em) {
   section.admin-info p {
@@ -804,6 +816,8 @@ body.admin-signup section.signup {
   body.admin section.login .login-header {
     margin-left: 30%; }
   body.admin-signup section.signup .signup-header {
+    margin-left: 30%; }
+  body.admin-signup .detail-container {
     margin-left: 30%; } }
 
 @media only screen and (min-width: 80em) {
@@ -837,6 +851,8 @@ body.admin-signup section.signup {
   body.admin section.login .login-header {
     margin-left: 40%; }
   body.admin-signup section.signup .signup-header {
+    margin-left: 40%; }
+  body.admin-signup .detail-container {
     margin-left: 40%; } }
 
 /*# sourceMappingURL=app.css.map */

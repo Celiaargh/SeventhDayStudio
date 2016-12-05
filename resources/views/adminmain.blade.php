@@ -241,7 +241,7 @@
 				</div>
 			</div>
 
-			{!! Form::open(['url'=>'front'])!!}
+			{!! Form::open(['url'=>'/'])!!}
 				<div class="form-group">
 					{{Form::label('firstname','First Name')}}
 					{!! Form::text('firstname',null,['class'=>'form-control'],['id'=>'firstname'],['name'=>'firstname']) !!}

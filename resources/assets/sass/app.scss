@@ -798,9 +798,29 @@ body.admin-signup{
 				}
 			}
 		}
+
+		.detail-container{
+			h3{
+				font-size:1.5em;
+				color: $LightPink;
+			}
+
+			a{
+				// border:green solid 1px;
+				text-transform: uppercase;
+				margin:0 auto;
+				padding:0.5em 0.5em;
+				background-color:#ccc;
+				color:#fff;
+				text-decoration:none;
+			}
+
+			a:hover{
+				background-color:#ffcccc;
+			}
+		}
 	}
 }
-
 
 
 
@@ -1013,6 +1033,8 @@ body.admin-signup{
 			margin:0 auto 1em;;
 			width: 25em;
 		}
+
+
 	}
 }
 
@@ -1336,6 +1358,13 @@ body.admin-signup{
 				margin-left: 30%;
 			}
 		}
+
+
+		.detail-container{
+
+			margin-left: 30%;
+			
+		}
 	}
 
 }
@@ -1441,6 +1470,13 @@ body.admin-signup{
 			.signup-header{
 				margin-left: 40%;
 			}
+		}
+
+		.detail-container{
+
+			
+			margin-left: 40%;
+			
 		}
 	}
 

@@ -20,28 +20,31 @@
 		<div class="detail-container">
 
 			<div class="details">
-				<h3>Username:{{$user->username}} </h3>
+				<h3>Username: {{$user->username}} </h3>
 				
 
 			</div>
 
 			<div class="details">
-				<h3>First Name:{{$user->first_name}} </h3>
+				<h3>First Name: {{$user->first_name}} </h3>
 				
 				
 
 			</div>
 
 			<div class="details">
-				<h3>Last Name:{{$user->last_name}}</h3>
+				<h3>Last Name: {{$user->last_name}}</h3>
 				
 				
 
 			</div>	
+
+			<a href="{{ url('users/'.Auth::user()->id.'/edit') }}">Edit Details</a>
+			<a href="{{url('/adminfront')}}">Back to admin panel</a>
 		</div>
 	
 
-	<a href="{{ url('users/'.Auth::user()->id.'/edit') }}">Edit Details</a>
+	
 				
 		
 	

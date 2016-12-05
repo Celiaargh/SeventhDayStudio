@@ -25,14 +25,14 @@
 			</div>
 
 			<div class="form-group" id="signup-group">
-					{!! Form::text('first_name',null,['placeholder'=>' First Name'],['class'=>'form-control'],['id'=>'firstname']) !!}
-					<p class="error">{{ $errors->first('firstname')}}</p>
+					{!! Form::text('first_name',$user->firstname,['placeholder'=>' First Name'],['class'=>'form-control'],['id'=>'firstname']) !!}
+					<p class="error">{{ $errors->first('first_name')}}</p>
 			</div>
 
 			<div class="form-group" id="signup-group">
 
-					{!! Form::text('last_name',null,['placeholder'=>' Last Name'],['class'=>'form-control'],['id'=>'lastname']) !!}
-					<p class="error">{{ $errors->first('lastname')}}</p>
+					{!! Form::text('last_name',$user->lastname,['placeholder'=>' Last Name'],['class'=>'form-control'],['id'=>'lastname']) !!}
+					<p class="error">{{ $errors->first('last_name')}}</p>
 			</div>
 
 
